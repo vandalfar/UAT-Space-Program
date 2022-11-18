@@ -1,0 +1,43 @@
+body{
+    background-color: lightgrey;
+    background-image: url("texture.gif"); /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
+    background-repeat: round;/*repeats the image a whole number of sizes, scaling to fit*/
+}
+img{
+    display: block; /*removes all img tags from inline elements*/
+    margin-left: auto; /*centers the image from the left*/
+    margin-right: auto; /*centers the image from the right*/
+}
+img[src*="spaceflightart.gif"]{
+    display: inline; /*brings the image back inline*/
+    width: 49px; /*static width*/
+    aspect-ratio: auto; /*sets the aspect ratio to remain constant through sizing*/
+    height: 49px; /*static height*/
+    vertical-align: -75%; /*aligns the image to the top of the header text*/
+    margin-right: 0.25em; /*creates padding next to the image*/
+}
+#homepage90sStyle{
+    text-align: left;
+    margin-bottom: 0em;
+    text-size-adjust: 3em;
+    margin-top: 0em;
+    margin-left: auto;
+}
+h1{
+    text-align: center;
+    text-size-adjust: 100%;
+}
+h2{
+    text-align : center;
+    color: red;
+}
+a[href*="nasa.gov"]{
+    font-family: "Arial Black", Tahoma, Verdana, sans-serif; /*helps NASA link appear more like thier logo, a la 1997 website*/
+    letter-spacing: 0.01em;
+    font-size:90%;
+}
+a[href*="uat.edu"]{
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    letter-spacing: 0.02em; /*increased readability*/
+    font-weight: bold;
+}
