@@ -73,4 +73,5 @@ function stopCountDown()
 //stopCounDown does not stop the timer - another reason to use a loop...
 {
     document.getElementById("countdownParagraph").innerHTML = "Canceled. There were "+ currTime +" seconds remaining until blastoff.";
+    alert("Unfortunately, starting the timer also seems to have started the ignition. The rocket still launched!");
 }
