@@ -2,8 +2,6 @@
 var currTime = 10;
 function displayCountDown() 
 {
-    //make countdown visible
-    document.getElementById("countdownTimer").style.display = "block";
     //timeout code from class-version.js
     setTimeout(function () {
         //first subtraction

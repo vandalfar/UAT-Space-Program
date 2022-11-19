@@ -1,7 +1,5 @@
 function countDown() {
     var currTime = 3;
-    //make countdown visible
-        document.getElementById("countdownTimer").style.display = "block";
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
