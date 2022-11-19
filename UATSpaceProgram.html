@@ -11,6 +11,7 @@ https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.htm
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
     <script src= "class-version.js"></script>
+    <script src= "unhide.js"></script>
     <title>UAT Space Program</title>
 </head>
 <body>
@@ -38,7 +39,7 @@ https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.htm
     <!--intentionally left blank-->
     <p id="countdownParagraph"><p hidden id="countdownTimer"></p></p>
     <!--start button-->
-    <button id = "startButton" onclick = "countDown()" >Start</button>
+    <button id = "startButton" onclick = "countDown(); unhide()" >Start</button>
     <!--stop button only works with UATSpaceProgram.js-->
     <!--<button id = "stopButton" onclick = "stopCountDown()">Stop</button>-->
 </body>
