@@ -1,6 +1,7 @@
 //create currTime variable
 var currTime = 10;
-function displayCountDown() 
+function displayCountDown()  //for an unknown reason, the function takes two seconds to display the initial countdown timer.
+// One second may be taken up by unhide(); in unhide.js, but I do not like the time it takes to display the box - even though it calls memories of early DSL loading times.
 { 
     //timeout code from class-version.js
     setTimeout(function () {
@@ -72,6 +73,7 @@ function displayCountDown()
 function stopCountDown()
 //stopCounDown does not stop the timer - another reason to use a loop...
 {
-    document.getElementById("countdownParagraph").innerHTML = "Canceled. There were "+ currTime +" seconds remaining until blastoff.";
+    document.getElementById("countdownParagraph").innerHTML = "Error: Ignition detected. There were "+ currTime +" seconds on the clock.";
     alert("Unfortunately, starting the timer also seems to have started the ignition. The rocket still launched!");
+    document.getElementById("countdownParagraph").innerHTML
 }

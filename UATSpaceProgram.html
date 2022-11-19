@@ -1,17 +1,27 @@
 <!-- Created by Michael Anderson-
 This page was created in homage of the Artemis program in NASA. Since this is our first webpage for class, I wanted to parody the first archived NASA homepage.
 You can find the link to that homepage here:
+
 https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.html
+
+I also wanted to see how difficult it would be to code a website like they did back in 1997, with keeping in mind that today's conventions are for responsive design and accessibility.
+This first website for class was definitely fun to code, and I kept referring to the book, and W3C, for some of the parts that were tricking me. Check the revision history on GitHub to see what I mean.
+I also used this website during the live classes to learn alongside and explore the ideas presented. That can also be reflected in my GitHub version history.
 -->
 <!DOCTYPE html>
+<!--This header with the entire DOCTYPE was created by the Visual Studio Code template ("!" + Tab key)-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--links to CSS  Stylesheet (UATSpace.css)-->
     <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
+    <!--links to JavaScript functions-->
     <script src= "UATSpaceProgram.js"></script>
+    <!--links to JavaScript function for unhiding hidden elements-->
     <script src= "unhide.js"></script>
+    <!--Title of the page-->
     <title>UAT Space Program</title>
 </head>
 <body>
@@ -30,12 +40,14 @@ https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.htm
             <li>Follow <a href = "http://www.nasa.gov">NASA</a> and the Artemis Program!</li>
             <li>Take a look at <a href = "http://www.uat.edu">UAT</a> to explore your future with technology.</li>
         </ul>
+        <!--statement from "Introduction to the UAT Space Program (It's Real!) in Canvas - it summarizes the goal of the program succinctly and adds to the atmosphere of the website."-->
+        <p>The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace. It will use a balloon for re-entry and landing and will collect data and pictures during the flight. It will also emit a signal so that when it lands, it can be recovered.</p>
         <!--call to action-->
         <p>Click the "Start" Button below to initiate blastoff:</p>
-    <!--intentionally left blank-->
+    <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer -->
     <p id="countdownParagraph"><p hidden id="countdownTimer"></p></p>
-    <!--start button-->
-    <button id = "startButton" onclick = "displayCountDown(); unhide();" >Start</button>
+    <!--start button calls two functions, displayCountDown(), and unhide(), separated by semicolon. Moved unhide() to first position to see effect on timing-->
+    <button id = "startButton" onclick = "unhide(); displayCountDown();" >Start</button>
     <!--stop button to mock cancelling the countdown-->
     <button id = "stopButton" onclick = "stopCountDown();">Stop</button>
 </body>
