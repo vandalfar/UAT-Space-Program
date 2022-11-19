@@ -1,7 +1,5 @@
 function countDown() {
-    var currTime = 3;
-    //make countdown visible
-        document.getElementById("countdownTimer").style.display = "block";
+    var currTime = 10;
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
@@ -33,13 +31,60 @@ function countDown() {
         currTime = currTime - 1;
     }, 4000);
 
+
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
-        document.getElementById("countdownTimer").innerHTML = "GO! ";
+        document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
-        alert(" And the race has begun");
     }, 5000);
+
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
+    }, 6000);
+
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
+    }, 7000);
+
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
+    }, 8000);
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
+    }, 9000);
+
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
+    }, 10000);
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = "Blast Off";
+        currTime = currTime - 1;
+        alert("blastoff");
+    }, 11000);
 
 }
  
