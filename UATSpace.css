@@ -1,35 +1,35 @@
 body{
-     /*backup color for browsers that cannot display texture.gif*/
+    /*backup color for browsers that cannot display texture.gif*/
     background-color: lightgrey;
-     /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
+    /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
     background-image: url("texture.gif");
-     /*repeats the image a whole number of sizes, scaling to fit*/
+    /*repeats the image a whole number of sizes, scaling to fit*/
     background-repeat: round;
 }
 img{
-      /*removes all img tags from inline elements*/
+    /*removes all img tags from inline elements*/
     display: block;
-     /*centers the image from the left*/
+    /*centers the image from the left*/
     margin-left: auto; 
-     /*centers the image from the right*/
+    /*centers the image from the right*/
     margin-right: auto;
 }
 img[src*="spaceflightart.gif"]{
-      /*brings the image back inline*/
+    /*brings the image back inline*/
     display: inline;
-     /*static width*/
+    /*static width*/
     width: 49px;
-     /*sets the aspect ratio to remain constant through sizing*/
+    /*sets the aspect ratio to remain constant through sizing*/
     aspect-ratio: auto;
-     /*static height*/
+    /*static height*/
     height: 49px;
-     /*aligns the image to the top of the header text - using em o rem resulted in undesired behavior at mobile size*/
+    /*aligns the image to the top of the header text - using em or rem resulted in undesired behavior at mobile size*/
     vertical-align: -75%;
-     /*creates padding next to the image*/
+    /*creates padding next to the image*/
     margin-right: 0.25em;
 }
 #homepage90sStyle{
-     /*realigns this specific header to the left of the page*/
+    /*realigns this specific header to the left of the page*/
     text-align: left;
     margin-bottom: 0em;
     text-size-adjust: 3em;
