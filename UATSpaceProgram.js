@@ -1,6 +1,6 @@
 //create currTime variable
 var currTime = 10;
-function displayCountDown()  //for an unknown reason, the function takes two seconds to display the initial countdown timer.
+function countDown()  //for an unknown reason, the function takes two seconds to display the initial countdown timer.
 // One second may be taken up by unhide(); in unhide.js, but I do not like the time it takes to display the box - even though it calls memories of early DSL loading times.
 //fixed timing issue by reducing each event by 1000 milliseconds. Timer now quickly appears and begins to count down to blastoff.
 { 
