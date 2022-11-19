@@ -72,6 +72,7 @@ function displayCountDown()
 
 }
 function stopCountDown()
+//stopCounDown does not stop the timer - another reason to use a loop...
 {
     document.getElementById("countdownParagraph").innerHTML = "Canceled. There were "+ currTime +" seconds remaining until blastoff.";
 }
