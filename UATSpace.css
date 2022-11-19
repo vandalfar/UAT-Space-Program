@@ -73,14 +73,14 @@ ul{
     font-size: 2em;
 }
 #countdownTimer{
-    border: 100% double black;
+    border: 3px double black;
     /*align the paragraph to the center of the page*/
     margin-left: auto;
     margin-right: auto;
     /*aligns the text to the center of the border*/
     text-align: center;
-    /*forces border to be one character wide*/
-    max-width: 1em;
+    /*forces border to be half of the screen*/
+    max-width: 50%;
     /*visual design*/
     font-family:'Courier New', Courier, monospace;
     font-size: xx-large;
