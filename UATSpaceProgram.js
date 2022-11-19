@@ -1,7 +1,7 @@
 //create currTime variable
 var currTime = 10;
 function displayCountDown() 
-{
+{ 
     //timeout code from class-version.js
     setTimeout(function () {
         //first subtraction

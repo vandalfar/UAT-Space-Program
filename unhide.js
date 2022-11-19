@@ -1,4 +1,4 @@
 function unhide(){
-        //make countdown visible
+        //make hidden content visible
         document.getElementById("countdownTimer").style.display = "block";
 }
