@@ -43,13 +43,15 @@ I also used this website during the live classes to learn alongside and explore 
         <!--statement from "Introduction to the UAT Space Program (It's Real!) in Canvas - it summarizes the goal of the program succinctly and adds to the atmosphere of the website."-->
         <p>The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace. It will use a balloon for re-entry and landing and will collect data and pictures during the flight. It will also emit a signal so that when it lands, it can be recovered.</p>
         <!--call to action-->
-        <p>Click the "Start" Button below to initiate blastoff:</p>
+        <p id="shoutout">Click the "Start" Button below to initiate blastoff:</p>
     <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer -->
     <p id="countdownParagraph"><p hidden id="countdownTimer"></p></p>
     <!--start button calls two functions, displayCountDown(), and unhide(), separated by semicolon. Moved unhide() to first position to see effect on timing-->
+    <center>
     <button id = "startButton" onclick = "unhide(); countDown();" >Start</button>
     <!--stop button to mock cancelling the countdown-->
     <button id = "stopButton" onclick = "stopCountDown();">Stop</button>
+    </center>
 </body>
 <footer>
     <!--add a horizontal ruler to the screen-->

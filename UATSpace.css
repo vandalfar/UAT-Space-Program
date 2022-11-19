@@ -71,6 +71,11 @@ ul{
     /*creates black bulleted list. Default was hollow bulleted list*/
     list-style-type: disc;
 }
+#shoutout{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 #countdownParagraph{
     /*align the text to the center of the page*/
     margin-left: auto;
@@ -95,4 +100,19 @@ ul{
     font-family:'Courier New', Courier, monospace;
     font-size: xx-large;
     font-weight: bold;
+}
+#startButton{
+    width: 65px;
+    height: 60px;
+    background-color: green;
+    border-color: lightgreen;
+    border-radius: 20%;
+    color: yellow;
+}
+#stopButton{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-color: orangered;
+    color: yellow;
 }
