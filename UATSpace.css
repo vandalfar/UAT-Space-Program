@@ -1,23 +1,36 @@
 body{
+     /*backup color for browsers that cannot display texture.gif*/
     background-color: lightgrey;
-    background-image: url("texture.gif"); /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
-    background-repeat: round;/*repeats the image a whole number of sizes, scaling to fit*/
+     /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
+    background-image: url("texture.gif");
+     /*repeats the image a whole number of sizes, scaling to fit*/
+    background-repeat: round;
 }
 img{
-    display: block; /*removes all img tags from inline elements*/
-    margin-left: auto; /*centers the image from the left*/
-    margin-right: auto; /*centers the image from the right*/
+      /*removes all img tags from inline elements*/
+    display: block;
+     /*centers the image from the left*/
+    margin-left: auto; 
+     /*centers the image from the right*/
+    margin-right: auto;
 }
 img[src*="spaceflightart.gif"]{
-    display: inline; /*brings the image back inline*/
-    width: 49px; /*static width*/
-    aspect-ratio: auto; /*sets the aspect ratio to remain constant through sizing*/
-    height: 49px; /*static height*/
-    vertical-align: -75%; /*aligns the image to the top of the header text - using em o rem resulted in undesired behavior at mobile size*/
-    margin-right: 0.25em; /*creates padding next to the image*/
+      /*brings the image back inline*/
+    display: inline;
+     /*static width*/
+    width: 49px;
+     /*sets the aspect ratio to remain constant through sizing*/
+    aspect-ratio: auto;
+     /*static height*/
+    height: 49px;
+     /*aligns the image to the top of the header text - using em o rem resulted in undesired behavior at mobile size*/
+    vertical-align: -75%;
+     /*creates padding next to the image*/
+    margin-right: 0.25em;
 }
 #homepage90sStyle{
-    text-align: left; /*realigns this specific header to the left of the page*/
+     /*realigns this specific header to the left of the page*/
+    text-align: left;
     margin-bottom: 0em;
     text-size-adjust: 3em;
     margin-top: 0em;
@@ -43,11 +56,33 @@ a[href*="uat.edu"]{
     font-weight: bold;
 }
 #mailto{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; /*makes the mailto link conform to the text*/
     letter-spacing: 0em;
     font-weight:normal;
 }
 ul{
     font-size: 110%;/*using em resulted in the whole page text becoming larger?*/
     list-style-type: disc;
+}
+#countdownParagraph{
+    /*align the text to the center of the page*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+}
+#countdownTimer{
+    border: 100% double black;
+    /*align the paragraph to the center of the page*/
+    margin-left: auto;
+    margin-right: auto;
+    /*aligns the text to the center of the border*/
+    text-align: center;
+    /*forces border to be one character wide*/
+    max-width: 1em;
+    /*visual design*/
+    font-family:'Courier New', Courier, monospace;
+    font-size: xx-large;
+    font-weight: bold;
 }

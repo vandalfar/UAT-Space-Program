@@ -10,52 +10,45 @@ https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.htm
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
+    <script src= "UATSpaceProgram.js"></script>
     <title>UAT Space Program</title>
 </head>
-<ul>
-    <img src = "UATSpace.png" alt="UAT Space Program Logo"><!-- UAT Space Program Logo downloaded from Files in Canvas, linked with relevant pathing for GitHub-->
+<body>
+    <!--alert message-->
+    <script language="javascript" type="text/javascript">
+        //alert("Welcome to the UAT Space Program!");
+    </script>
+    <!-- UAT Space Program Logo downloaded from Files in Canvas -->
+    <img src = "UATSpace.png" alt="UAT Space Program Logo">
+    <!--Page Welcome Slash-->
     <h1>Welcome to the UAT Space Program!</h1>
     <h2>Exploring the Upper Limits of Technology and Space.</h2>
+    <!--line break-->
     <hr>
-    <h1 id="homepage90sStyle"><img src="spaceflightart.gif" alt ="90's style Shuttle Takeoff art">UAT Space Program Homepage</h1> <!--image pulled from Archive.org https://web.archive.org/web/19970711112200im_/http://www.nasa.gov/hqpao/images/spaceflightart.gif-->
+    <!--mimics the style from the 1997 NASA website by including an inline image with the text at the top-->
+    <!--image pulled from Archive.org https://web.archive.org/web/19970711112200im_/http://www.nasa.gov/hqpao/images/spaceflightart.gif-->
+    <h1 id="homepage90sStyle"><img src="spaceflightart.gif" alt ="90's style Shuttle Takeoff art">UAT Space Program Homepage</h1>
+        <!--an unordered list to mimic the unordered list of links from the 1997 website-->
         <ul>
             <li>Follow <a href = "http://www.nasa.gov">NASA</a> and the Artemis Program!</li>
             <li>Take a look at <a href = "http://www.uat.edu">UAT</a> to explore your future with technology.</li>
         </ul>
-    <p>Click the "Start" Button below to initiate blastoff:</p>
-    <script language="javascript" type="text/javascript">
-        alert("Welcome to the UAT Space Program!");
-    </script>
-    <script language = "javascript" type = "text/javascript">
-        document.write("<p>Are you ready?</p>")
-    </script>
-    <script language="javacript" type="text/javascript">
-        var num1 = 2
-        var num2 = 4
-        var sum = num1+num2
-        var sub = num1-num2
-        var mul = num1*num2
-        var div = num1/num2
-        var incriment = ++num1
-        var decrement = --num2
-
-        document.write("Sum = "+ sum)
-        document.write("<br>")
-        document.write("Difference = "+ sub)
-        document.write("<br>")
-        document.write("Product = "+ mul)
-        document.write("<br>")
-        document.write("Quotient = "+ div)
-        document.write("<br>")
-        document.write("First Number + 1 = "+ incriment)
-        document.write("<br>")
-        document.write("Second Number - 1 =" + decrement)
-    </script>
-    <!--<button>Start</button>
-    <button>Stop</button>-->
-    <hr>
-    <p>You can send <a id="mailto" href = "mailto:micander1@uat.edu?subject=UAT Space Program Website">comments or questions</a> about this Web site.</p> <!-- The original NASA website had this footer attached, with a mailto and the author right on the page. The 90's were a different place!-->
-    <p>Author: Mike Anderson<br>Curator: M. Anderson<br>WebSite Design: Michael G. Anderson<br><br>Last update: November 18, 2022</p>
-
+        <!--call to action-->
+        <p>Click the "Start" Button below to initiate blastoff:</p>
+    <!--intentionally left blank-->
+    <p id="countdownParagraph"><p hidden id="countdownTimer"></p></p>
+    <!--start button-->
+    <button id = "startButton" onclick = "displayCountDown()" >Start</button>
+    <button id = "stopButton" onclick = "stopCountDown()">Stop</button>
 </body>
+<footer>
+    <hr>
+    <!-- The original NASA website had this footer attached, with a mailto and the author right on the page. The 90's were a different place!-->
+    <p>You can send <a id="mailto" href = "mailto:micander1@uat.edu?subject=UAT Space Program Website">comments or questions</a> about this Web site.</p>
+    <p>Author: Mike Anderson<br>
+       Curator: M. Anderson<br>
+       WebSite Design: Michael G. Anderson<br>
+       <br>
+       Last update: November 18, 2022</p>
+</footer>
 </html>
