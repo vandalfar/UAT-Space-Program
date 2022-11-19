@@ -13,15 +13,16 @@ img[src*="spaceflightart.gif"]{
     width: 49px; /*static width*/
     aspect-ratio: auto; /*sets the aspect ratio to remain constant through sizing*/
     height: 49px; /*static height*/
-    vertical-align: -75%; /*aligns the image to the top of the header text*/
+    vertical-align: -75%; /*aligns the image to the top of the header text - using em o rem resulted in undesired behavior at mobile size*/
     margin-right: 0.25em; /*creates padding next to the image*/
 }
 #homepage90sStyle{
-    text-align: left;
+    text-align: left; /*realigns this specific header to the left of the page*/
     margin-bottom: 0em;
     text-size-adjust: 3em;
     margin-top: 0em;
     margin-left: auto;
+    margin-bottom: 1em;
 }
 h1{
     text-align: center;
@@ -37,7 +38,16 @@ a[href*="nasa.gov"]{
     font-size:90%;
 }
 a[href*="uat.edu"]{
-    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif; /*provides consistancy to the UAT link*/
     letter-spacing: 0.02em; /*increased readability*/
     font-weight: bold;
+}
+#mailto{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0em;
+    font-weight:normal;
+}
+ul{
+    font-size: 110%;/*using em resulted in the whole page text becoming larger?*/
+    list-style-type: disc;
 }
