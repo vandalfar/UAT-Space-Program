@@ -1,35 +1,35 @@
 body{
-     /*backup color for browsers that cannot display texture.gif*/
+    /*backup color for browsers that cannot display texture.gif*/
     background-color: lightgrey;
-     /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
+    /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
     background-image: url("texture.gif");
-     /*repeats the image a whole number of sizes, scaling to fit*/
+    /*repeats the image a whole number of sizes, scaling to fit*/
     background-repeat: round;
 }
 img{
-      /*removes all img tags from inline elements*/
+    /*removes all img tags from inline elements*/
     display: block;
-     /*centers the image from the left*/
+    /*centers the image from the left*/
     margin-left: auto; 
-     /*centers the image from the right*/
+    /*centers the image from the right*/
     margin-right: auto;
 }
 img[src*="spaceflightart.gif"]{
-      /*brings the image back inline*/
+    /*brings the image back inline*/
     display: inline;
-     /*static width*/
+    /*static width*/
     width: 49px;
-     /*sets the aspect ratio to remain constant through sizing*/
+    /*sets the aspect ratio to remain constant through sizing*/
     aspect-ratio: auto;
-     /*static height*/
+    /*static height*/
     height: 49px;
-     /*aligns the image to the top of the header text - using em o rem resulted in undesired behavior at mobile size*/
+    /*aligns the image to the top of the header text - using em or rem resulted in undesired behavior at mobile size*/
     vertical-align: -75%;
-     /*creates padding next to the image*/
+    /*creates padding next to the image*/
     margin-right: 0.25em;
 }
 #homepage90sStyle{
-     /*realigns this specific header to the left of the page*/
+    /*realigns this specific header to the left of the page*/
     text-align: left;
     margin-bottom: 0em;
     text-size-adjust: 3em;
@@ -38,41 +38,56 @@ img[src*="spaceflightart.gif"]{
     margin-bottom: 1em;
 }
 h1{
+    /*centering of h1 text - removed size adjustment due to redundancy*/
     text-align: center;
-    text-size-adjust: 100%;
 }
 h2{
+    /*centering and coloring of h2 text*/
     text-align : center;
     color: red;
 }
 a[href*="nasa.gov"]{
-    font-family: "Arial Black", Tahoma, Verdana, sans-serif; /*helps NASA link appear more like thier logo, a la 1997 website*/
+    /*helps NASA link appear more like thier logo, which makes the link stand out*/
+    font-family: "Arial Black", Tahoma, Verdana, sans-serif;
     letter-spacing: 0.01em;
     font-size:90%;
 }
 a[href*="uat.edu"]{
-    font-family: "Segoe UI", Tahoma, Verdana, sans-serif; /*provides consistancy to the UAT link*/
-    letter-spacing: 0.02em; /*increased readability*/
+    /*provides consistancy to the UAT link*/
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    /*increased readability*/
+    letter-spacing: 0.02em;
     font-weight: bold;
 }
 #mailto{
-    font-family: 'Times New Roman', Times, serif; /*makes the mailto link conform to the text*/
+    /*makes the mailto link conform to the text*/
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 0em;
     font-weight:normal;
 }
 ul{
-    font-size: 110%;/*using em resulted in the whole page text becoming larger?*/
+    /*using em resulted in the whole page text becoming larger?*/
+    font-size: 110%;
+    /*creates black bulleted list. Default was hollow bulleted list*/
     list-style-type: disc;
+}
+#shoutout{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 #countdownParagraph{
     /*align the text to the center of the page*/
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    /*Draw attention to the text by having it stand out from Times*/
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2em;
+    color: red;
 }
 #countdownTimer{
+    /*create 90's style border to the countdown and blastoff element, reason for hiding the element with hidden tag. Looks nice, may cause website to be slower.*/
     border: 3px double black;
     /*align the paragraph to the center of the page*/
     margin-left: auto;
@@ -85,4 +100,19 @@ ul{
     font-family:'Courier New', Courier, monospace;
     font-size: xx-large;
     font-weight: bold;
+}
+#startButton{
+    width: 65px;
+    height: 60px;
+    background-color: green;
+    border-color: lightgreen;
+    border-radius: 50%;
+    color: yellow;
+}
+#stopButton{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-color: orangered;
+    color: yellow;
 }

@@ -5,6 +5,14 @@ function countDown() {
         //code goes here for first timer
         document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
+    }, 0000);
+
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = currTime;
+        currTime = currTime - 1;
     }, 1000);
 
 
@@ -55,7 +63,6 @@ function countDown() {
         currTime = currTime - 1;
     }, 7000);
 
-
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
@@ -63,31 +70,24 @@ function countDown() {
         currTime = currTime - 1;
     }, 8000);
 
-    //timer for seconds left
-    setTimeout(function () {
-        //code goes here for first timer
-        document.getElementById("countdownTimer").innerHTML = currTime;
-        currTime = currTime - 1;
-    }, 9000);
-
 
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
         document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
+    }, 90000);
+
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = "Blast Off!";
+        currTime = currTime - 1;
+        alert("Blast Off!");
     }, 10000);
 
-    //timer for seconds left
-    setTimeout(function () {
-        //code goes here for first timer
-        document.getElementById("countdownTimer").innerHTML = "Blast Off";
-        currTime = currTime - 1;
-        alert("blastoff");
-    }, 11000);
-
 }
- 
+//modified the timer to fit with the unhide() function from unhide.js, added punctuation
    
 
  
