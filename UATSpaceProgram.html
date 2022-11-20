@@ -1,70 +1,96 @@
 <!-- Created by Michael Anderson-
-This page was created in homage of the Artemis program in NASA. Since this is our first webpage for class, I wanted to parody the first archived NASA homepage.
+This page was created in homage of the Artemis program recently reaching its first milestone. Since this is our first webpage (and milestone) for this class,
+I wanted to parody the first archived NASA homepage.
 You can find the link to that homepage here:
 
 https://web.archive.org/web/19970711085416/http://www.nasa.gov/index_regular.html
 
-I also wanted to see how difficult it would be to code a website like they did back in 1997, with keeping in mind that today's conventions are for responsive design and accessibility.
-This first website for class was definitely fun to code, and I kept referring to the book, and W3C, for some of the parts that were tricking me. Check the revision history on GitHub to see what I mean.
-I also used this website during the live classes to learn alongside and explore the ideas presented. That can also be reflected in my GitHub version history.
--->
+I also wanted to see how difficult it would be to code a website like they did back in 1997, with keeping in mind that today's conventions are for responsive
+design and accessibility. I used this website during the live classes to learn alongside and explore the ideas presented. This first website was definitely
+fun to code, and I kept referring to the book, and W3C, for some of the parts that were tricking me. Check the revision history on GitHub to see what I mean.-->
 <!DOCTYPE html>
 <!--This header with the entire DOCTYPE was created by the Visual Studio Code template ("!" + Tab key)-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--links to CSS  Stylesheet (UATSpace.css)-->
-    <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
-    <!--links to JavaScript functions-->
-    <script src= "class-version.js"></script>
-    <!--links to JavaScript function for unhiding hidden elements and other functionality-->
-    <script src= "error.js"></script>
-    <!--Title of the page-->
-    <title>UAT Space Program</title>
-</head>
-<body>
-    <!-- UAT Space Program Logo downloaded from Files in Canvas -->
-    <img src = "UATSpace.png" alt="UAT Space Program Logo">
-    <!--Page Welcome Splash, using h1 and h2 headings to achieve different sizes and other function-->
-    <h1>Welcome to the UAT Space Program!</h1>
-    <h2>Exploring the Upper Limits of Technology and Space.</h2>
-    <!--add a horizontal ruler to the screen-->
-    <hr>
-    <!--mimics the style from the 1997 NASA website by including an inline image with the text at the top-->
-    <!--image pulled from Archive.org https://web.archive.org/web/19970711112200im_/http://www.nasa.gov/hqpao/images/spaceflightart.gif-->
-    <h1 id="homepage90sStyle"><img src="spaceflightart.gif" alt ="90's style Shuttle Takeoff art">UAT Space Program Homepage</h1>
-        <!--an unordered list to mimic the unordered list of links from the 1997 website-->
-        <ul>
-            <li>Follow <a href = "http://www.nasa.gov">NASA</a> and the Artemis Program!</li>
-            <li>Take a look at <a href = "http://www.uat.edu">UAT</a> to explore your future with technology.</li>
-        </ul>
-        <!--statement from "Introduction to the UAT Space Program (It's Real!) in Canvas - it summarizes the goal of the program succinctly and adds to the atmosphere of the website."-->
-        <p>The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace.<br>It will use a balloon for re-entry and landing and will collect data and pictures during the flight. It will also emit a signal so that when it lands, it can be recovered.</p>
-        <!--call to action-->
-        <p id="shoutout">Click the "Start" Button below to initiate launch:</p>
-    <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer -->
-    <p id="countdownParagraph"><p id="countdownTimer">Initializing...<p id="quoteBlock"></p></p>
-    <!--the buttons won't center the way I want without the HTML tag. Why?-->
-    <center>
-    <!--start button calls two functions, displayCountDown(), and unhide(), separated by semicolon. Moved unhide() to first position to see effect on timing
-        spamming this button now produces undersirable behavior, stacking the countDown() script to produce a sped up version of the countdown that skips 
-        numbers and goes negative, stuttering around-->
-    <button id = "startButton" onclick = "countDown();" >Start</button>
-    <!--stop button to mock cancelling the countdown-->
-    <button id = "stopButton" onclick = "stopCountDown();">Stop</button>
-    </center>
-</body>
-<footer>
-    <!--add a horizontal ruler to the screen-->
-    <hr>
-    <!-- The original NASA website had this footer attached, with a mailto and the author right on the page. The 90's were a different place!-->
-    <p>You can send <a id="mailto" href = "mailto:micander1@uat.edu?subject=UAT Space Program Website">comments or questions</a> about this Web site.</p>
-    <p>Author: Mike Anderson<br>
-       Curator: M. Anderson<br>
-       WebSite Design: Michael G. Anderson<br>
-       <br>
-       Last update: November 19, 2022</p>
-</footer>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--links to CSS  Stylesheet (UATSpace.css)-->
+        <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
+        <!--links to JavaScript functions-->
+        <script src= "class-version.js"></script>
+        <!--links to JavaScript function for creating an inspirational error-->
+        <script src= "error.js"></script>
+        <!--Title of the page-->
+        <title>UAT Space Program</title>
+    </head>
+    <body>
+        <!-- UAT Space Program Logo downloaded from Files in Canvas -->
+        <img src = "UATSpace.png" alt="UAT Space Program Logo">
+        <!--Page splash message, using h1 and h2 headings to achieve different sizes of text-->
+        <h1>
+            Welcome to the UAT Space Program!
+        </h1>
+        <h2>
+            Exploring the Upper Limits of Technology and Space.
+        </h2>
+        <!--add a horizontal ruler to the screen-->
+        <hr>
+        <!--mimics the style from the 1997 NASA website by including an inline image with the text at the top
+            image pulled from Archive.org https://web.archive.org/web/19970711112200im_/http://www.nasa.gov/hqpao/images/spaceflightart.gif-->
+        <h1 id="homepage90sStyle"><img src="spaceflightart.gif" alt ="90's style Shuttle Takeoff art">
+            UAT Space Program Homepage
+        </h1>
+            <!--an unordered list to mimic the unordered list of links from the 1997 website-->
+            <ul>
+                <li>Follow <a href = "http://www.nasa.gov">NASA</a> and the Artemis Program!</li>
+                <li>Take a look at <a href = "http://www.uat.edu">UAT</a> to explore your future with technology.</li>
+            </ul>
+            <!--statement from "Introduction to the UAT Space Program (It's Real!) in Canvas - it summarizes the goal of the program succinctly and adds to the atmosphere of the website."-->
+            <p>The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace.<br>
+                It will use a balloon for re-entry and landing and will collect data and pictures during the flight.<br>
+                It will also emit a signal so that when it lands, it can be recovered.
+            </p>
+            <!--call to action-->
+            <p id="shoutout">
+                Click the "Start" Button below to initiate launch:
+            </p>
+            <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer -->
+            <p id="countdownParagraph">
+                <p id="countdownTimer">
+                    Initializing...
+                    <p id="quoteBlock">
+
+                    </p>
+                </p>
+            </p>   
+        <!--the buttons won't center the way I want without the HTML tag. Putting them in a div for floating control could help, but is really finicky-->
+        <p id="buttons">
+            <center>
+                <!--start button calls countDown(); function-->
+                <button id = "startButton" onclick = "countDown();" >
+                  START
+             </button>
+                <!--stop button creates a fake error - updates the page and leaves a little inspirational quote
+                    if a loop were used inside the timer, I would link this in to stop the timer at its current time-->
+                <button id = "stopButton" onclick = "stopCountDown();">
+                    STOP
+                </button>
+            </center>
+        </p>
+    </body>
+    <footer>
+        <!--add a horizontal ruler to the screen-->
+        <hr>
+        <!-- The original NASA website had this footer attached, with a mailto and the author right on the page. The 90's were a different place!-->
+        <p>
+            You can send <a id="mailto" href = "mailto:micander1@uat.edu?subject=UAT Space Program Website">comments or questions</a> about this Web site.
+        </p>
+        <p>Author: Mike Anderson<br>
+        Curator: M. Anderson<br>
+        WebSite Design: Michael G. Anderson<br>
+        <br>
+        Last update: November 19, 2022
+        </p>
+    </footer>
 </html>

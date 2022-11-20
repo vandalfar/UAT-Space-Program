@@ -1,6 +1,6 @@
 body{
     /*backup color for browsers that cannot display texture.gif*/
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.836);
     /*image pulled from archive.org, https://web.archive.org/web/19970711085515im_/http://www.nasa.gov/hqpao/images/texture.gif; Saved July 11th, 1997, NASA.*/
     background-image: url("texture.gif");
     /*repeats the image a whole number of sizes, scaling to fit*/
@@ -29,27 +29,32 @@ img[src*="spaceflightart.gif"]{
     margin-right: 0.25em;
 }
 #homepage90sStyle{
-    /*realigns this specific header to the left of the page*/
+    /*realigns this specific element to the left of the page*/
     text-align: left;
-    margin-bottom: 0em;
-    text-size-adjust: 3em;
+    /*set top padding to 0*/
     margin-top: 0em;
+    /*relative text sizing for h1 element*/
+    text-size-adjust: 100%;
+    /*automatically adjust left margin to keep element in position when resizing screen*/
     margin-left: auto;
+    /*add one letter space after header text*/
     margin-bottom: 1em;
 }
 h1{
-    /*centering of h1 text - removed size adjustment due to redundancy*/
+    /*centering of h1 text*/
     text-align: center;
 }
 h2{
     /*centering and coloring of h2 text*/
     text-align : center;
-    color: red;
+    color: rgba(255, 0, 0, 1.0);
 }
 a[href*="nasa.gov"]{
     /*helps NASA link appear more like thier logo, which makes the link stand out*/
     font-family: "Arial Black", Tahoma, Verdana, sans-serif;
+    /*increases readability and adds to style of NASA link*/
     letter-spacing: 0.01em;
+    /*reduce size to fit in with paragraph better*/
     font-size:90%;
 }
 a[href*="uat.edu"]{
@@ -66,59 +71,73 @@ a[href*="uat.edu"]{
     font-weight:normal;
 }
 ul{
-    /*using em resulted in the whole page text becoming larger?*/
+    /*sizing the text of the unordered list element to be relatively 10% larger*/
     font-size: 110%;
-    /*creates black bulleted list. Default was hollow bulleted list*/
+    /*sets the style of the bulleted list to be filled in bullets*/
     list-style-type: disc;
 }
 #shoutout{
-    margin-left: auto;
-    margin-right: auto;
+    /*align the text to the center of the page*/
     text-align: center;
 }
 #countdownParagraph{
     /*align the text to the center of the page*/
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
     /*Draw attention to the text by having it stand out from Times*/
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2em;
-    color: red;
+    font-size: 200%;
+    color: rgba(255, 0, 0, 1.0);
 }
 #quoteBlock{
     text-align:center;
     font-family:'Courier New', Courier, monospace;
-    color:gray;
-    font-size: 1.5em;
+    color:rgba(80, 80, 80, 0.95);
+    font-size: 150%;
 }
 #countdownTimer{
-    /*create 90's style border to the countdown and blastoff element, reason for hiding the element with hidden tag. Nice effect, causes a one second delay.*/
-    border: 3px double black;
-    /*align the paragraph to the center of the page*/
+    /*creates a double border for the table that the numbers appear in*/
+    border: 3px double rgba(0, 0, 0, 1.0);
+    /*align the paragraph with border to the center of the page*/
     margin-left: auto;
     margin-right: auto;
     /*aligns the text to the center of the border*/
     text-align: center;
-    /*forces border to be half of the screen*/
-    max-width: 50%;
+    /*forces border to fit the contents of the paragraph in relative terms*/
+    width: 10em;
     /*visual design*/
     font-family:'Courier New', Courier, monospace;
-    font-size: xx-large;
+    font-size: 200%;
     font-weight: bold;
 }
+#buttons{
+    /*moves the buttons over right to be in alignment with A of UAT Space logo*/
+    margin-left: -1%;
+}
 #startButton{
-    width: 65px;
+    /*defines width and height*/
+    width: 70px;
     height: 60px;
-    background-color: green;
-    border-color: lightgreen;
+    /*green for go, right?*/
+    background-color: rgba(0, 128, 0, 1.0);
+    border-color: rgba(144, 233, 144, 1.0);
+    /*make this a rounded button that's slightly oval*/
     border-radius: 50%;
-    color: yellow;
+    /*yellow stands out against the background*/
+    color: rgba(255, 255, 0, 1.0);
+    /*added for visibility and visual flair*/
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 #stopButton{
+    /*defines the width and height*/
     width: 60px;
     height: 60px;
-    background-color: red;
-    border-color: orangered;
-    color: yellow;
+    /*red square button for stop*/
+    background-color: rgba(255, 0, 0, 1.0);
+    border-color: rgba(255, 69, 0, 1.0);
+    /*color for readability and consistency*/
+    color: rgba(255, 255, 0, 1.0);
+    /*added for visibility and visual flair*/
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
