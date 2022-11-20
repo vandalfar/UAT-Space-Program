@@ -11,4 +11,5 @@ function stopCountDown()
     document.getElementById("countdownParagraph").innerHTML = "> Error: Ignition detected!";
     //alert shows whenever the "Stop" button is pressed, which also causes the above paragraph to contain text
     alert("There was an error.\n> Error: Ignition detected!\nThe rocket still launched!");
+document.getElementById("quoteBlock").innerHTML = "<br><q>Each time you fail, you have eliminated another wrong option.</q><br>   - Thomas A. Edison";
 }

@@ -76,7 +76,7 @@ function countDown() {
         //code goes here for first timer
         document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
-    }, 90000);
+    }, 9000);
 
     //timer for seconds left
     setTimeout(function () {
@@ -87,7 +87,4 @@ function countDown() {
     }, 10000);
 
 }
-//modified the timer to fit with the unhide() function from unhide.js, added punctuation
-   
-
- 
+ //modified timing to help with unhide() issue (it takes a second or to unhide the paragraph, the timer started a second after. Both happening at the same time keeps consistency to assignment.

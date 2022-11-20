@@ -86,6 +86,12 @@ ul{
     font-size: 2em;
     color: red;
 }
+#quoteBlock{
+    text-align:center;
+    font-family:'Courier New', Courier, monospace;
+    color:gray;
+    font-size: 1.5em;
+}
 #countdownTimer{
     /*create 90's style border to the countdown and blastoff element, reason for hiding the element with hidden tag. Looks nice, may cause website to be slower.*/
     border: 3px double black;
