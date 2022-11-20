@@ -5,14 +5,6 @@ function countDown() {
         //code goes here for first timer
         document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
-    }, 0000);
-
-
-    //timer for seconds left
-    setTimeout(function () {
-        //code goes here for first timer
-        document.getElementById("countdownTimer").innerHTML = currTime;
-        currTime = currTime - 1;
     }, 1000);
 
 
@@ -63,13 +55,13 @@ function countDown() {
         currTime = currTime - 1;
     }, 7000);
 
+
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
         document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
     }, 8000);
-
 
     //timer for seconds left
     setTimeout(function () {
@@ -78,13 +70,24 @@ function countDown() {
         currTime = currTime - 1;
     }, 9000);
 
+
     //timer for seconds left
     setTimeout(function () {
         //code goes here for first timer
-        document.getElementById("countdownTimer").innerHTML = "Blast Off!";
+        document.getElementById("countdownTimer").innerHTML = currTime;
         currTime = currTime - 1;
-        alert("Blast Off!");
     }, 10000);
 
+    //timer for seconds left
+    setTimeout(function () {
+        //code goes here for first timer
+        document.getElementById("countdownTimer").innerHTML = "Blast Off";
+        currTime = currTime - 1;
+        alert("blastoff");
+    }, 11000);
+
 }
- //modified timing to help with unhide() issue (it takes a second or to unhide the paragraph, the timer started a second after. Both happening at the same time keeps consistency to assignment.
+ 
+   
+
+ 

@@ -93,7 +93,7 @@ ul{
     font-size: 1.5em;
 }
 #countdownTimer{
-    /*create 90's style border to the countdown and blastoff element, reason for hiding the element with hidden tag. Looks nice, may cause website to be slower.*/
+    /*create 90's style border to the countdown and blastoff element, reason for hiding the element with hidden tag. Nice effect, causes a one second delay.*/
     border: 3px double black;
     /*align the paragraph to the center of the page*/
     margin-left: auto;

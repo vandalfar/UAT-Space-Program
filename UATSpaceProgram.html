@@ -20,7 +20,7 @@ I also used this website during the live classes to learn alongside and explore 
     <!--links to JavaScript functions-->
     <script src= "class-version.js"></script>
     <!--links to JavaScript function for unhiding hidden elements and other functionality-->
-    <script src= "unhide.js"></script>
+    <script src= "error.js"></script>
     <!--Title of the page-->
     <title>UAT Space Program</title>
 </head>
@@ -45,13 +45,13 @@ I also used this website during the live classes to learn alongside and explore 
         <!--call to action-->
         <p id="shoutout">Click the "Start" Button below to initiate launch:</p>
     <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer -->
-    <p id="countdownParagraph"><p hidden id="countdownTimer"><p id="quoteBlock"></p></p>
+    <p id="countdownParagraph"><p id="countdownTimer">Initializing...<p id="quoteBlock"></p></p>
     <!--the buttons won't center the way I want without the HTML tag. Why?-->
     <center>
     <!--start button calls two functions, displayCountDown(), and unhide(), separated by semicolon. Moved unhide() to first position to see effect on timing
         spamming this button now produces undersirable behavior, stacking the countDown() script to produce a sped up version of the countdown that skips 
         numbers and goes negative, stuttering around-->
-    <button id = "startButton" onclick = "unhide(); countDown();" >Start</button>
+    <button id = "startButton" onclick = "countDown();" >Start</button>
     <!--stop button to mock cancelling the countdown-->
     <button id = "stopButton" onclick = "stopCountDown();">Stop</button>
     </center>
