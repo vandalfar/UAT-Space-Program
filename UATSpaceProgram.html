@@ -18,7 +18,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
         <!--links to CSS  Stylesheet (UATSpace.css)-->
         <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
         <!--links to JavaScript functions-->
-        <script src= "class-version.js"></script>
+        <script src= "countdown.js"></script>
         <!--links to JavaScript function for creating an inspirational error-->
         <script src= "error.js"></script>
         <!--Title of the page-->
@@ -42,11 +42,13 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             UAT Space Program Homepage
         </h1>
             <!--an unordered list to mimic the unordered list of links from the 1997 website-->
-            <ul>
-                <li>Follow <a href = "http://www.nasa.gov">NASA</a> and the Artemis Program!</li>
-                <li>Take a look at <a href = "http://www.uat.edu">UAT</a> to explore your future with technology.</li>
+            <ul class = "linkList">
+                <li><a href = "http://www.nasa.gov">NASA</a> - Follow Nasa for more information abnout Outer Space!</li>
+                <li><a href = "https://blogs.nasa.gov/artemis/">Artemis Program</a> - Follow the Artemis program on their blog!</li>
+                <li><a href = "http://www.uat.edu">UAT</a> - Take a look at UAT to explore your future with technology!</li>
                 <!--statement from "Introduction to the UAT Space Program (It's Real!) in Canvas - it summarizes the goal of the program succinctly and adds to the atmosphere of the website."-->
-                <li>The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace.</li>
+                <!--created a fake link inside of the span for the UAT Space Program page as an easy reload for the page, and also add to the illusion that this is a list of links-->
+                <li><span onclick="location.reload()">UAT Space Program</span> - The goal of the UAT Space Program is to create a reusable spacecraft that can carry payloads for experiments to near outerspace.</li>
                 <li>It will use a balloon for re-entry and landing and will collect data and pictures during the flight.</li>
                 <li>It will also emit a signal so that when it lands, it can be recovered.</li>
             </ul>
@@ -57,8 +59,8 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
         
             <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer with the id #quoteblock to make text appear below the timer -->
             <p id="countdownParagraph">
-                <p id="countdownTimer">
-                    Initializing...
+                <p class="timer" id="countdownTimer">
+                    Initializing<span>.</span><span>.</span><span>.</span>
                     <p id="quoteBlock">
 
                     </p>
@@ -73,7 +75,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
              </button>
                 <!--stop button creates a fake error - updates the page and leaves a little inspirational quote
                     if a loop were used inside the timer, I would link this in to stop the timer at its current time-->
-                <button id = "stopButton" onclick = "stopCountDown();">
+                <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "stopCountDown();">
                     STOP
                 </button>
             </center>

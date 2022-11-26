@@ -49,6 +49,18 @@ h2{
     text-align : center;
     color: rgba(255, 0, 0, 1.0);
 }
+/*copies the stype of the NASA link for consistency*/
+.linkList span {
+    /*forces the text to be blue*/
+    color: rgba(0, 0, 255, 1.0);
+    /*underlines the text to mimick a link*/
+    text-decoration: underline;
+    font-family: "Arial Black", Tahoma, Verdana, sans-serif;
+    letter-spacing: 0.01em;
+    font-size: 90%;
+    /*finalizes the illusion of the false link by changing the hand to a pointer*/
+    cursor: pointer;
+}
 a[href*="nasa.gov"]{
     /*helps NASA link appear more like thier logo, which makes the link stand out*/
     font-family: "Arial Black", Tahoma, Verdana, sans-serif;
@@ -103,11 +115,36 @@ ul{
     /*aligns the text to the center of the border*/
     text-align: center;
     /*forces border to fit the contents of the paragraph in relative terms*/
-    width: 10em;
+    width: 15em;
     /*visual design*/
     font-family:'Courier New', Courier, monospace;
     font-size: 200%;
     font-weight: bold;
+}
+/*an animation for the ellipsis of the "Initializing" holder phrase in the countdownTimer paragraph to bring visual interest to the site*/
+.timer span {
+    /*initial opacity in the animation is set to 0*/
+    opacity: 0;
+    /*calls the animation with the keyframe "ellipsisDot" and runs it infinitely, stretching the animation over 3 and a half seconds*/
+    animation: ellipsisDot 3.5s infinite;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a spcified amount*/
+.timer span:nth-child(1) {
+    animation-delay: 0.0s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a spcified amount*/
+.timer span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a spcified amount*/
+.timer span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+/*the keyframes for the animation make the text in the span go from transparent to fully visible and back to transparent.*/
+@keyframes ellipsisDot{
+    0% {opacity: 0;}
+    50%{opacity: 100;}
+    100% {opacity: 0;}
 }
 #buttons{
     /*moves the buttons over right to be in alignment with A of UAT Space logo*/
