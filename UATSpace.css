@@ -49,15 +49,15 @@ h2{
     text-align : center;
     color: rgba(255, 0, 0, 1.0);
 }
-/*copies the stype of the NASA link for consistency*/
+/*copies the stype of the UAT link for consistency*/
 .linkList span {
     /*forces the text to be blue*/
     color: rgba(0, 0, 255, 1.0);
     /*underlines the text to mimick a link*/
     text-decoration: underline;
-    font-family: "Arial Black", Tahoma, Verdana, sans-serif;
-    letter-spacing: 0.01em;
-    font-size: 90%;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: bold;
     /*finalizes the illusion of the false link by changing the hand to a pointer*/
     cursor: pointer;
 }
