@@ -30,6 +30,9 @@ function countDown(){
 }
 //a proper stop button has been included in this function - 
 function endCountDown(){
+    //clears the countdownParagraph and quoteBlock elements if the easter egg has been triggered
+    document.getElementById("countdownParagraph").innerHTML = " ";
+    document.getElementById("quoteBlock").innerHTML = " ";
     //thank you for the suggestion for the Stop button!
     clearInterval(time);
     document.getElementById("countdownTimer").innerHTML = "Ignition Cancelled.</br>There were " +currTime+ " seconds left on the clock.";
