@@ -24,5 +24,5 @@ function countDown(){
 //a proper stop button has been included in this function.
 function endCountDown(){
     clearInterval(time);
-    document.getElementById("countdownTimer").innerHTML = "Ignition Cancelled.</br>" +currTime+ " seconds left on the clock.";
+    document.getElementById("countdownTimer").innerHTML = "Ignition Cancelled.</br>There were " +currTime+ " seconds left on the clock.";
 }

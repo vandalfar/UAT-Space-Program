@@ -116,11 +116,12 @@ ul{
     /*aligns the text to the center of the border*/
     text-align: center;
     /*forces border to fit the contents of the paragraph in relative terms - made wider to fit the cancellation message*/
-    width: 18em;
+    width: 15em;
     /*visual design*/
     font-family:'Courier New', Courier, monospace;
     font-size: 200%;
     font-weight: bold;
+    font-stretch: condensed;
 }
 /*an animation for the ellipsis of the "Initializing" holder phrase in the countdownTimer paragraph to bring visual interest to the site*/
 .timer span {
