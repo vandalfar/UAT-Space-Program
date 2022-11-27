@@ -39,7 +39,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
         <!--mimics the style from the 1997 NASA website by including an inline image with the text at the top
             image pulled from Archive.org https://web.archive.org/web/19970711112200im_/http://www.nasa.gov/hqpao/images/spaceflightart.gif-->
         <h1 id="homepage90sStyle"><img src="spaceflightart.gif" alt ="90's style Shuttle Takeoff art">
-            UAT Space Program Homepage
+            The UAT Space Program Homepage
         </h1>
             <!--an unordered list to mimic the unordered list of links from the 1997 website-->
             <ul class = "linkList">
@@ -52,12 +52,13 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
                 <li>It will use a balloon for re-entry and landing and will collect data and pictures during the flight.</li>
                 <li>It will also emit a signal so that when it lands, it can be recovered.</li>
             </ul>
+            <!--add a horizontal ruler to the scren to separate mission control from the rest of the website-->
             <hr>
+            <h2>MISSION CONTROL</h2>
             <!--call to action-->
             <p id="shoutout">
                 Click the "Start" Button below to initiate launch:
             </p>
-        
             <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer with the id #quoteblock to make text appear below the timer -->
             <p id="countdownParagraph">
                 <p class="timer" id="countdownTimer">
@@ -78,7 +79,6 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
                         ><span>.</span
                         ><span>.</span>
                     <p id="quoteBlock">
-
                     </p>
                 </p>
             </p>   
@@ -88,8 +88,8 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
                 <!--start button calls countDown(); function-->
                 <button id = "startButton" onclick = "countDown();" >
                   START
-             </button>
-                <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped then double clicked-->
+                </button>
+                <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped and then double clicked-->
                 <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
                     STOP
                 </button>
