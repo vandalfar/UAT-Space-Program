@@ -57,7 +57,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             <h2>MISSION CONTROL</h2>
             <!--call to action-->
             <p id="shoutout">
-                Click the "Start" Button below to initiate launch:
+                Click the "LAUNCH" Button below to initiate launch:
             </p>
             <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer with the id #quoteblock to make text appear below the timer -->
             <p id="countdownParagraph">
@@ -87,11 +87,11 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             <center>
                 <!--start button calls countDown(); function-->
                 <button id = "startButton" onclick = "countDown();" >
-                  START
+                    LAUNCH
                 </button>
                 <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped and then double clicked-->
                 <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
-                    STOP
+                    CANCEL
                 </button>
             </center>
         </p>

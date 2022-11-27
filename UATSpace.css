@@ -1,3 +1,4 @@
+/*created by Michael Anderson*/
 body{
     /*backup color for browsers that cannot display texture.gif*/
     background-color: rgba(211, 211, 211, 0.836);
@@ -204,8 +205,8 @@ ul{
 }
 #startButton{
     /*defines width and height*/
-    width: 70px;
-    height: 60px;
+    width: 80px;
+    height: 70px;
     /*green for go, right?*/
     background-color: rgba(0, 128, 0, 1.0);
     border-color: rgba(144, 233, 144, 1.0);
@@ -216,11 +217,12 @@ ul{
     /*added for visibility and visual flair*/
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 102.5%;
 }
 #stopButton{
     /*defines the width and height*/
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 70px;
     /*red square button for stop*/
     background-color: rgba(255, 0, 0, 1.0);
     border-color: rgba(255, 69, 0, 1.0);
@@ -229,4 +231,6 @@ ul{
     /*added for visibility and visual flair*/
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    /*increases visibility*/
+    font-size: 102.5%;
 }
