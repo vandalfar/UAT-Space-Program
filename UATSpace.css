@@ -121,22 +121,22 @@ ul{
     font-family:'Courier New', Courier, monospace;
     font-size: 200%;
     font-weight: bold;
-    font-stretch: condensed;
 }
-/*an animation for the ellipsis of the "Initializing" holder phrase in the countdownTimer paragraph to bring visual interest to the site*/
+/*an animation for the holder text in the countDown paragraph that blinks the letters in order*/
 .timer span {
-    /*initial opacity in the animation is set to 0*/
-    opacity: 0;
-    /*calls the animation with the keyframe "ellipsisDot" and runs it infinitely, stretching the animation over five seconds to create the desired effect*/
-    animation: ellipsisDot 5s infinite;
+    /*initial opacity in the animation is set to 100%*/
+    opacity: 100%;
+    /*calls the animation with the keyframe "ellipsisDot" and runs it infinitely, stretching the animation over five seconds to create the desired effect and calling the
+     animation to create a blinking effect*/
+    animation: 5s blink step-end infinite;
 }
 /*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
 .timer span:nth-child(1) {
-    animation-delay: 0.0s;
+    animation-delay: 0.1s;
 }
 /*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
 .timer span:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay: 0.2s;
 }
 /*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
 .timer span:nth-child(3) {
@@ -193,10 +193,10 @@ ul{
     animation-delay: 1.5s;
 }
 /*the keyframes for the animation make the text in the span go from transparent to fully visible and back to transparent.*/
-@keyframes ellipsisDot{
-    0% {opacity: 0;}
+@keyframes blink {
+    /*cbanged to relative terms for simpler code*/
+    from, to {opacity: 0;}
     50%{opacity: 100;}
-    100% {opacity: 0;}
 }
 #buttons{
     /*moves the buttons over right to be in alignment with A of UAT Space logo*/

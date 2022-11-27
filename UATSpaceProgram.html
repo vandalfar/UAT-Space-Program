@@ -52,6 +52,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
                 <li>It will use a balloon for re-entry and landing and will collect data and pictures during the flight.</li>
                 <li>It will also emit a signal so that when it lands, it can be recovered.</li>
             </ul>
+            <hr>
             <!--call to action-->
             <p id="shoutout">
                 Click the "Start" Button below to initiate launch:
@@ -60,6 +61,7 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer with the id #quoteblock to make text appear below the timer -->
             <p id="countdownParagraph">
                 <p class="timer" id="countdownTimer">
+                        <!--the span elements are arranged this way to remove whitespace in the lettering-->
                         <span>I</span
                         ><span>n</span
                         ><span>i</span
@@ -87,9 +89,8 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
                 <button id = "startButton" onclick = "countDown();" >
                   START
              </button>
-                <!--stop button creates a fake error - updates the page and leaves a little inspirational quote
-                    if a loop were used inside the timer, I would link this in to stop the timer at its current time-->
-                <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "stopCountDown();">
+                <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped then double clicked-->
+                <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
                     STOP
                 </button>
             </center>
