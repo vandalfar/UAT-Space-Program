@@ -116,7 +116,7 @@ ul{
     /*aligns the text to the center of the border*/
     text-align: center;
     /*forces border to fit the contents of the paragraph in relative terms - made wider to fit the cancellation message*/
-    width: 15em;
+    width: 18em;
     /*visual design*/
     font-family:'Courier New', Courier, monospace;
     font-size: 200%;
@@ -126,8 +126,8 @@ ul{
 .timer span {
     /*initial opacity in the animation is set to 0*/
     opacity: 0;
-    /*calls the animation with the keyframe "ellipsisDot" and runs it infinitely, stretching the animation over 3 and a half seconds*/
-    animation: ellipsisDot 3.5s infinite;
+    /*calls the animation with the keyframe "ellipsisDot" and runs it infinitely, stretching the animation over five seconds to create the desired effect*/
+    animation: ellipsisDot 5s infinite;
 }
 /*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
 .timer span:nth-child(1) {
@@ -140,6 +140,56 @@ ul{
 /*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
 .timer span:nth-child(3) {
     animation-delay: 0.3s;
+}
+
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(10) {
+    animation-delay: 1.0s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(12) {
+    animation-delay: 1.2s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(13) {
+    animation-delay: 1.3s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(14) {
+    animation-delay: 1.4s;
+}
+/*calls the spans of the timer class with a numerical child (nth-child()) and delays their animation by a specified amount*/
+.timer span:nth-child(15) {
+    animation-delay: 1.5s;
 }
 /*the keyframes for the animation make the text in the span go from transparent to fully visible and back to transparent.*/
 @keyframes ellipsisDot{
