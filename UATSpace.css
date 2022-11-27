@@ -217,6 +217,7 @@ ul{
     /*added for visibility and visual flair*/
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    /*increases visibility*/
     font-size: 102.5%;
 }
 #stopButton{
