@@ -5,6 +5,6 @@ function stopCountDown() {
   document.getElementById("countdownParagraph").innerHTML = "> Error: Ignition detected!";
   //alert shows whenever the "Stop" button is pressed, which also causes the above paragraph to contain text
   //added \n to create new line elements
-  alert("There was an error.\n \n> Error: Ignition detected!\n \nThe rocket just launched!");
+  alert("There was an error.\n \n> Error: Ignition detected!\n \nThe rocket just ignited!");
   document.getElementById("quoteBlock").innerHTML = "<br><q>Each time you fail, you have eliminated another wrong option.</q><br>   - Thomas A. Edison";
 }
