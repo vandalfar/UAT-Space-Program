@@ -19,7 +19,6 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
         <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
         <!--links to login JavaScript-->
         <script src="login.js"></script>
-
         <!--Title of the page-->
         <title>UAT Space Program</title>
     </head>
@@ -54,12 +53,15 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             <!--add a horizontal ruler to the scren to separate mission control from the rest of the website-->
             <hr>
             <div id = "loginBox" class = "loginID">
-                <p id = "loginStatus"> Please log in to continue to Mission Control: 
+                <p>
+                    <img class="userImage" src = "loggedOut.png"><h3>Log in to continue to Mission Control:</h3>
+                </p>
+                <p id = "loginStatus"> 
                     <form id = "loginForm" onsubmit = "return false">
                         <input type = "text"  id = "fName" placeholder = "First Name" name = "fName" required/><br>
                         <input type = "text" id = "lName" placeholder = "Last Name" name = "lName" required/><br>
                         <input type = "number" id = "badgeNo" placeholder = "000" name = "badgeNo" required/><br>
-                        <input type = "submit" onclick="logIn();" value = "Log In"/>
+                        <input type = "submit" onclick="saveData(); logIn();" value = "Log In"/>
                     </form>
                 </p>
             </div>

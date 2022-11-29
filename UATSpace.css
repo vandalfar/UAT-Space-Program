@@ -29,6 +29,15 @@ img[src*="spaceflightart.gif"]{
     /*creates padding next to the image*/
     margin-right: 0.25em;
 }
+.userImage{
+    /*brings the image back inline*/
+    display:inline-flex;
+    /*forces width and height*/
+    width: 49px;
+    height: 49px;
+    vertical-align: -75%;
+    aspect-ratio: auto;
+}
 #homepage90sStyle{
     /*realigns this specific element to the left of the page*/
     text-align: left;
@@ -91,6 +100,7 @@ ul{
 }
 .loginID{
     text-align: right;
+    font-family: 'Courier New', Courier, monospace;
 }
 #shoutout{
     /*align the text to the center of the page*/

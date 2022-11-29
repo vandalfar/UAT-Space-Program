@@ -12,17 +12,10 @@
     <link rel="stylesheet" type = "text/css" href = "UATSpace.css">
     <title>Misson Control</title>
 </head>
-<body>
+<body  onload="getInfo();">
     <!-- UAT Space Program Logo downloaded from Files in Canvas -->
     <img src = "UATSpace.png" alt="UAT Space Program Logo">
     <h1>The University of Advancing Technology Space Program</h1>
-    <hr>
-    <p id = "loginStatustwo" class = "loginID">
-        Test
-    </p>
-    <div class = "loginID">
-        <button id = "logOutButton" onclick="logOut();" >Log Out</button>
-    </div>
     <hr>
     <h2>MISSION CONTROL</h2>
     <!--call to action-->
@@ -65,6 +58,17 @@
         </button>
     </center>
 </p>
+<hr>
+<!--logout button returns user to previous page by calling a function-->
+<div class = "loginID">
+    <p>
+        <img class = "userImage" src="loggedIn.png"><h3>Session Information:</h3>
+    </p>
+    <p id = "loginStatusTwo">
+        
+    </p>
+    <button id = "logOutButton" onclick="logOut();" >Log Out</button>
+</div>
 </body>
 <footer>
         <!--add a horizontal ruler to the screen-->
