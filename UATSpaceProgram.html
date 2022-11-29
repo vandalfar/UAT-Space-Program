@@ -17,10 +17,9 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--links to CSS  Stylesheet (UATSpace.css)-->
         <link rel = "stylesheet" type = "text/css" href = "UATSpace.css">
-        <!--links to JavaScript functions-->
-        <script src= "countdown.js"></script>
-        <!--links to JavaScript function for creating an inspirational error-->
-        <script src= "error.js"></script>
+        <!--links to login JavaScript-->
+        <script src="login.js"></script>
+
         <!--Title of the page-->
         <title>UAT Space Program</title>
     </head>
@@ -54,47 +53,16 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             </ul>
             <!--add a horizontal ruler to the scren to separate mission control from the rest of the website-->
             <hr>
-            <h2>MISSION CONTROL</h2>
-            <!--call to action-->
-            <p id="shoutout">
-                Click the "LAUNCH" Button below to initiate launch:
-            </p>
-            <!--intentionally left blank, using two paragraph (<p>) tags with ids to create separate areas of affect within the function, using hidden element in #countdownTimer with the id #quoteblock to make text appear below the timer -->
-            <p id="countdownParagraph">
-                <p class="timer" id="countdownTimer">
-                        <!--the span elements are arranged this way to remove whitespace in the lettering-->
-                        <span>I</span
-                        ><span>n</span
-                        ><span>i</span
-                        ><span>t</span
-                        ><span>i</span
-                        ><span>a</span
-                        ><span>l</span
-                        ><span>i</span
-                        ><span>z</span
-                        ><span>i</span
-                        ><span>n</span
-                        ><span>g</span
-                        ><span>.</span
-                        ><span>.</span
-                        ><span>.</span>
-                    <p id="quoteBlock">
-                    </p>
+            <div id = "loginBox" class = "loginID">
+                <p id = "loginStatus"> Please log in to continue to Mission Control: 
+                    <form id = "loginForm" onsubmit = "return false">
+                        <input type = "text"  id = "fName" placeholder = "First Name" name = "fName" required/><br>
+                        <input type = "text" id = "lName" placeholder = "Last Name" name = "lName" required/><br>
+                        <input type = "number" id = "badgeNo" placeholder = "000" name = "badgeNo" required/><br>
+                        <input type = "submit" onclick="logIn();" value = "Log In"/>
+                    </form>
                 </p>
-            </p>   
-        <!--the buttons won't center the way I want without the HTML tag. Putting them in a div for floating control could help, but is really finicky-->
-        <p id="buttons">
-            <center>
-                <!--start button calls countDown(); function-->
-                <button id = "startButton" onclick = "countDown();" >
-                    LAUNCH
-                </button>
-                <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped and then double clicked-->
-                <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
-                    CANCEL
-                </button>
-            </center>
-        </p>
+            </div>
     </body>
     <footer>
         <!--add a horizontal ruler to the screen-->

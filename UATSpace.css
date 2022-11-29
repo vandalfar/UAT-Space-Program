@@ -89,6 +89,9 @@ ul{
     /*sets the style of the bulleted list to be filled in bullets*/
     list-style-type: disc;
 }
+.loginID{
+    text-align: right;
+}
 #shoutout{
     /*align the text to the center of the page*/
     text-align: center;
