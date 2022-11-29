@@ -18,6 +18,12 @@ function countDown(){
             //calls an alert for the Blast Off like the previous version
             alert("Blast Off!");
         }
+        else if(currTime < 5){
+            //compliance from mission control - used the unicode version of the 1/2 character for accessibility
+            document.getElementById("countdownParagraph").innerHTML = "<span>WARNING!</span> Less than \u00BD way to launch.</br> Time Left ="
+            //calls the countdownTimer element by ID and replaces its inner HTML with the text from this statement.
+            document.getElementById("countdownTimer").innerHTML = "T- "+currTime;
+        }
         //the else statement here is the actual timer that runs when you click the button
         else{
             //calls the countdownTimer element by ID and replaces its inner HTML with the text from this statement.
