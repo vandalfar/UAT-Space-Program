@@ -52,29 +52,88 @@ fun to code, and I kept referring to the book, and W3C, for some of the parts th
             </ul>
             <!--add a horizontal ruler to the scren to separate mission control from the rest of the website-->
             <hr>
-            <div id="launchSchedule">
-                <table>
-                    <thead>
-                        <th>Launch Date</th>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <!--creates a division of the website that contains both the launch information table and the login box -->
+            <div class="launchAndLogin">
+                <div class="launchTable">
+                     <table id="launchTable" border = "3" width = 100%>
+                        <!--defines the table head information the same way as the website header-->
+                        <thhead>
+                            <!--title outside of the table-->
+                            <h3 id="missionDates">MISSION LAUNCH DATES:</h3>
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <tr>
+                                <th>Date:</th>
+                                <th>Time:</th>
+                                <th>Weather:</th>
+                                <th>Launch Result:</th><!--Boolean-->
+                            </tr>
+                        </thhead>
+                        <tbody>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-11-21">Nov. 21<span class="superScript">st</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>67° F Mostly Sunny </td>
+                                <td id="launchResult1">Success</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-11-28">Nov. 28<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>71° F Cloudy </td>
+                                <td id="launchResult2">Success</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>69° F Sunny </td>
+                                <td id="launchResult3">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="23:59">11:59 PM</time></td>
+                                <td>47° F Clear </td>
+                                <td id="launchResult3">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>64° F Partly Cloudy </td>
+                                <td id="launchResult4">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="23:59">11:59 PM</time></td>
+                                <td>42° F Partly Cloudy </td>
+                                <td id="launchResult5">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-19">Dec. 19<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>~ 68° F Unknown </td>
+                                <td id="launchResult6">TBD</td>      
+                            </tr>
+                        </tbody>
+                    </table>
+            </div> 
             <div id = "loginBox" class = "loginID">
-                <p>
-                    <img class="userImage" src = "loggedOut.png"><h3>Log in to continue to Mission Control:</h3>
+                <p class="console">
+                    <img class="userImage" src = "loggedOut.png"><h3 class="console"> ><span>:</span>user/Login:</h3>
                 </p>
                 <p id = "loginStatus"> 
                     <form id = "loginForm" onsubmit = "return false">
-                        <input type = "text"  id = "fName" placeholder = "First Name" name = "fName" required/><br>
-                        <input type = "text" id = "lName" placeholder = "Last Name" name = "lName" required/><br>
-                        <input type = "number" id = "badgeNo" placeholder = "000" name = "badgeNo" required/><br>
-                        <input type = "submit" onclick="saveData(); logIn();" value = "Log In"/>
+                        <label for="fName">First Name</label>
+                        <input type = "text"  id = "fName" placeholder = "First Name" name = "fName" required autocomplete="off"/><br>
+                        <label for="lName">Last Name</label>
+                        <input type = "text" id = "lName" placeholder = "Last Name" name = "lName" required autocomplete="off"/><br>
+                        <label for="badgeNo">Badge No.</label>
+                        <input type = "number" id = "badgeNo" placeholder = "000" name = "badgeNo" required autocomplete="off"/><br>
+                        <input id="loginButton" type = "submit" onclick="saveData(); logIn();" value = "Log In"/>
                     </form>
                 </p>
             </div>
+        </div>
     </body>
     <footer>
         <!--add a horizontal ruler to the screen-->

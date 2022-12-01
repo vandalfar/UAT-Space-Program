@@ -8,11 +8,12 @@
     <script src = "countdown.js"></script>
     <script src = "error.js"></script>
     <script src = "login.js"></script>
+    <script src = "notepad.js"></script>
     <!--links the CSS stylesheet to the page-->
     <link rel="stylesheet" type = "text/css" href = "UATSpace.css">
     <title>Misson Control</title>
 </head>
-<body  onload="getInfo();">
+<body  onload="getInfo(); notePad();">
     <!-- UAT Space Program Logo downloaded from Files in Canvas -->
     <img src = "UATSpace.png" alt="UAT Space Program Logo">
     <h1>The University of Advancing Technology Space Program</h1>
@@ -45,30 +46,110 @@
             </p>
         </p>
     </p>   
-<!--the buttons won't center the way I want without the HTML tag. Putting them in a div for floating control could help, but is really finicky-->
-<p id="buttons">
-    <center>
-        <!--start button calls countDown(); function-->
-        <button id = "startButton" onclick = "countDown();" >
-            LAUNCH
-        </button>
-        <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped and then double clicked-->
-        <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
-            CANCEL
-        </button>
-    </center>
-</p>
-<hr>
-<!--logout button returns user to previous page by calling a function-->
-<div class = "loginID">
-    <p>
-        <img class = "userImage" src="loggedIn.png"><h3>Session Information:</h3>
+    <!--the buttons won't center the way I want without the HTML tag. Putting them in a div for floating control could help, but is really finicky-->
+    <p id="buttons">
+        <center>
+            <!--start button calls countDown(); function-->
+            <button id = "startButton" onclick = "countDown();" >
+                LAUNCH
+            </button>
+            <!--stop button stops the timer and displays a message on first click, and starts the countDown and displays a fake error if first stopped and then double clicked-->
+            <button id = "stopButton"  onclick = "endCountDown();" ondblclick = "countDown(); stopCountDown();">
+                CANCEL
+            </button>
+        </center>
     </p>
-    <p id = "loginStatusTwo">
-        
-    </p>
-    <button id = "logOutButton" onclick="logOut();" >Log Out</button>
-</div>
+    <hr>
+    <div class="launchAndLogin">
+        <div class="launchTable">
+                <table id="launchTable" border = "3" width = 100%>
+                    <!--defines the table head information the same way as the website header-->
+                    <thhead>
+                        <thhead>
+                            <!--title outside of the table-->
+                            <h3 id="missionDates">MISSION LAUNCH DATES:</h3>
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <col style = "width : 20%">
+                            <tr>
+                                <th>Date:</th>
+                                <th>Time:</th>
+                                <th>Weather:</th>
+                                <th>Launch Result:</th><!--Boolean-->
+                            </tr>
+                        </thhead>
+                        <tbody>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-11-21">Nov. 21<span class="superScript">st</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>67° F Mostly Sunny </td>
+                                <td id="launchResult1">Success</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-11-28">Nov. 28<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>71° F Cloudy </td>
+                                <td id="launchResult2">Success</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>69° F Sunny </td>
+                                <td id="launchResult3">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="23:59">11:59 PM</time></td>
+                                <td>47° F Clear </td>
+                                <td id="launchResult3">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>64° F Partly Cloudy </td>
+                                <td id="launchResult4">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="23:59">11:59 PM</time></td>
+                                <td>42° F Partly Cloudy </td>
+                                <td id="launchResult5">TBD</td>      
+                            </tr>
+                            <tr id = "tbody">
+                                <td><time datetime="2022-12-19">Dec. 19<span class="superScript">th</span> 2022</time></td>
+                                <td><time datetime="11:59">11:59 AM</time></td>
+                                <td>~ 68° F Unknown </td>
+                                <td id="launchResult6">TBD</td>      
+                            </tr>
+                    </tbody>
+                </table>
+        </div> 
+        <!--logout button returns user to previous page by calling a function-->
+        <div class = "loginID">
+            <p>
+                <img class = "userImage" src="loggedIn.png"><h3 class="console">><span>:</span>/Session_Information:</h3>
+            </p>
+            <!--target of getInfo();-->
+            <p id = "loginStatusTwo">
+                
+            </p>
+            <button id = "logOutButton" onclick="logOut();" >Log Out</button>
+        </div>
+    </div>
+    <hr>
+    <div id="noteBlock">
+        <div id="timeBlock">
+            <p class="statBlock"><span>></span> UAT_OS v1.0</p>
+            <p>Time & Date: <span id="dateTime">Loading...</span></p>
+        </div>
+        <label for="noteText"><h3 id="userNotes">><span>:</span>/user/Notes/sessionNote.txt</h3></label>
+        <br>
+        <textarea rows="24" cols="100" type ="text" id = "noteText" name="note" placeholder="//Type your notes here."></textarea>
+        <br>
+        <button id="saveNote" onclick="saveNote();">Save</button>
+        <button id="clearNote" onclick="clearNote();">Clear</button>
+    </div>
 </body>
 <footer>
         <!--add a horizontal ruler to the screen-->
@@ -82,7 +163,7 @@
             Curator: M. Anderson<br>
             WebSite Design: Michael G. Anderson<br>
             <br>
-            Last update: November 27, 2022
+            Last update: November 30, 2022
         </p>
 </footer>
 </html>

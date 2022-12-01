@@ -38,6 +38,9 @@ img[src*="spaceflightart.gif"]{
     vertical-align: -75%;
     aspect-ratio: auto;
 }
+.superScript{
+    vertical-align: super;
+}
 #homepage90sStyle{
     /*realigns this specific element to the left of the page*/
     text-align: left;
@@ -58,6 +61,20 @@ h2{
     /*centering and coloring of h2 text*/
     text-align : center;
     color: rgba(255, 0, 0, 1.0);
+}
+h3{
+    color: rgba(255,255,255,0.8);
+    padding-right: 1em;
+    padding-left: 1em;
+}
+#missionDates{
+    text-align: center;
+    color: rgba(255,0,0,0.8);
+    font-size: 145%;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 12em;
+    /*resets the background to clear*/
+    background-color:rgba(0, 0, 0, 0.0);
 }
 /*copies the stype of the UAT link for consistency*/
 .linkList span {
@@ -98,9 +115,179 @@ ul{
     /*sets the style of the bulleted list to be filled in bullets*/
     list-style-type: disc;
 }
+/*sets the margins of all div elements to auto*/
+div{
+    margin:auto;
+}
+/*sets the launchAndLogin div to be a flexbox*/
+.launchAndLogin {
+    display:flex;
+}
+#launchTable{
+    /*forces the width of the table flexbox element to be wider*/
+    width: 145%;
+}
+th{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+td{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(100, 100, 100, 0.10);
+}
+td:nth-child(4){
+    /*aligns the last column of the table right*/
+    text-align: right;
+}
+#launchResult1, #launchResult2{
+    /*colors the text green and centers it within its cell*/
+    color:green;
+    font-weight: bold;
+    text-align: center;
+    /*changing font to draw attention*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#launchResult3, #launchResult4, #launchResult5, #launchResult6, #launchResult7{
+    color: purple;
+}
 .loginID{
+    margin-right: 1%;
     text-align: right;
     font-family: 'Courier New', Courier, monospace;
+    background-image: url("UATSpace-Program.png");
+    background-repeat: no-repeat;
+    background-color: gray;
+    background-size: 180px 180px;
+    background-position: 3% 50%;
+    border: 3px double rgba(80,80,80,0.95);
+    padding: 3px;
+    width: 30em;
+    height: 18em;
+}
+label{
+    color:rgba(255, 255, 255, 0.75)
+}
+input{
+    background:rgba(10,10,10,0.8);
+    color:white;
+    border: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 13em;
+    text-align: right;
+}
+#noteBlock{
+    /*aligns the block to the right side of the screen*/
+    margin-left: 30.5%;
+    /*immitates a computer terminal with this background*/
+    background-color: rgba( 0, 0, 0, 1.0);
+    /*converts display to inline-block to cut off background color at area size*/
+    display:inline-block;
+    /*border helps visual interest*/
+    border: 5px double rgba(255, 255, 255, 0.9);
+    /*aligns the buttons to the center*/
+    text-align: center;
+}
+#timeBlock{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 120%;
+    font-weight: bold;
+    color: lightgreen;
+    text-align: right;
+    padding: 1em;
+}
+.statBlock{
+    text-align: left;
+    color: red;
+}
+.statBlock span{
+      /*initial opacity in the animation is set to 100%*/
+      opacity: 100%;
+      /*calls the animation with shorthand and keyframes with the name "initA" and runs it infinitely,
+        using the timing function step-end (the same as steps(1, jump-end) to create the blink,
+        and stretching the animation over one and a half seconds to create the desired effect*/
+      animation: 1.5s initA step-end infinite;
+      animation-delay: 0.5s;
+}
+#dateTime{
+    color:lightyellow;
+}
+#userNotes{
+    /*coloring and stylizing the text*/
+    color:rgba(128, 128, 128, 0.925);
+    font-family: 'Courier New', Courier, monospace;
+    /*align headertext left*/
+    text-align: left;
+}
+#userNotes span{
+     /*initial opacity in the animation is set to 100%*/
+     opacity: 100%;
+     /*calls the animation with shorthand and keyframes with the name "initA" and runs it infinitely,
+       using the timing function step-end (the same as steps(1, jump-end) to create the blink,
+       and stretching the animation over one second to create the desired effect*/
+     animation: 1s initA step-end infinite;
+}
+textarea{
+    /*colors the background of the text area*/
+    background:rgba(0,0,0,0.8);
+    /*sets the text color*/
+    color:rgba(255, 255, 255, 1.0);
+    /*increased font size for consistency*/
+    font-size: 120%;
+    /*removed visible border*/
+    border: 0px;
+    /*font settings*/
+    font-family: 'Courier New', Courier, monospace;
+    /*align text left*/
+    text-align: left;
+}
+#noteText{
+    /*color user-input text differently*/
+    color:rgba(211, 211, 211, 1.0);
+}
+#loginButton, #logOutButton, #saveNote, #clearNote{
+    /*aligns button text to center*/
+    text-align: center;
+    /*creates semitransparent background*/
+    background:rgba(10,10,10,0.8);
+    /*color of text*/
+    color:rgba(255, 255, 255, 1.0);
+    /*dashed border*/
+    border: 2px dashed rgba(255,255,255,0.4);
+    /*no border sides*/
+    border-left: 0px;
+    border-right: 0px;
+    /*adding padding*/
+    padding: 5px;
+    /*manually defined width and height*/
+    width: 13em;
+    height: 3em;
+    /*adds a margin around the element*/
+    margin: 3px;
+    /*change font*/
+    font-family: 'Courier New', Courier, monospace;
+}
+#saveNote, #clearNote{
+    /*turns the background transparent*/
+    background-color:rgba(0, 0, 0, 0.0);
+    /*changes to pointer to show user it is clickable*/
+    cursor: pointer;
+}
+.console span {
+     /*initial opacity in the animation is set to 100%*/
+     opacity: 100%;
+     /*calls the animation with shorthand and keyframes with the name "initA" and runs it infinitely,
+       using the timing function step-end (the same as steps(1, jump-end) to create the blink,
+       and stretching the animation over one second to create the desired effect*/
+     animation: 1s initA step-end infinite;
+}
+#loginStatus{
+    /*sets the text color for error messages to yellow*/
+    color: rgba(251, 255, 0, 1.0);
+}
+#loginStatusTwo{
+    /*sets the text color to white*/
+    color: rgba(255, 255, 255, 1.0);
 }
 #shoutout{
     /*align the text to the center of the page*/
@@ -136,11 +323,13 @@ ul{
     font-size: 200%;
     font-weight: bold;
 }
+/*--------------------------------------------------------------------     Beginning of Animation     ------------------------------------------------------------------------------*/
 /*an animation for the holder text in the countDown paragraph that blinks the letters in order*/
 .timer span {
     /*initial opacity in the animation is set to 100%*/
     opacity: 100%;
-    /*calls the animation with shorthand with the name "initA" and runs it infinitely, using the timing function step-end (the same as steps(1, jump-end) to create the blink,
+    /*calls the animation with shorthand and keyframses with the name "initA" and runs it infinitely,
+      using the timing function step-end (the same as steps(1, jump-end) to create the blink,
       and stretching the animation over five seconds to create the desired effect*/
     animation: 5s initA step-end infinite;
 }
@@ -212,6 +401,7 @@ ul{
     from, to {opacity: 0;}
     50%{opacity: 100;}
 }
+/*----------------------------------------------------------------------      End of Animation          ----------------------------------------------------------------------------*/
 #buttons{
     /*moves the buttons over right to be in alignment with A of UAT Space logo*/
     margin-left: -1%;
