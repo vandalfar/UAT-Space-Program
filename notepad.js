@@ -28,4 +28,4 @@ function rTime() {
     display.textContent = formattedString;
   }
   //update interval for rTime in milliseconds
-  setInterval(rTime, 1000);
+setInterval(rTime, 1000);

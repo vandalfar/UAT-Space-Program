@@ -63,15 +63,20 @@ h2{
     color: rgba(255, 0, 0, 1.0);
 }
 h3{
+    /*color and visibility increase*/
     color: rgba(255,255,255,0.8);
     padding-right: 1em;
     padding-left: 1em;
 }
 #missionDates{
+    /*aligning the text to the center of the flexbox*/
     text-align: center;
+    /*matches the color of other secondary elements*/
     color: rgba(255,0,0,0.8);
-    font-size: 145%;
+    /*visually closer to h2 size without matching it exactly*/
+    font-size: 140%;
     font-family: 'Courier New', Courier, monospace;
+    /*bumps the label over by 12em to be more visually inline to the table*/
     margin-left: 12em;
     /*resets the background to clear*/
     background-color:rgba(0, 0, 0, 0.0);
@@ -128,17 +133,22 @@ div{
     width: 145%;
 }
 th{
+    /*manually set font and size*/
     font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+    font-size: 120%;
 }
 td{
+    /*align the text to the center of the cell*/
     text-align: center;
+    /*manually set font and color*/
     font-family:'Courier New', Courier, monospace;
     background-color: rgba(100, 100, 100, 0.10);
 }
 td:nth-child(4){
     /*aligns the last column of the table right*/
     text-align: right;
+    /*adds padding on the right to increase readability*/
+    padding-right: 3px;
 }
 #launchResult1, #launchResult2{
     /*colors the text green and centers it within its cell*/
@@ -147,21 +157,29 @@ td:nth-child(4){
     text-align: center;
     /*changing font to draw attention*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*removes 1em right padding from success statements*/
+    padding-right: 0px;
 }
 #launchResult3, #launchResult4, #launchResult5, #launchResult6, #launchResult7{
+    /*differentiate from failure or success*/
     color: purple;
 }
 .loginID{
     margin-right: 1%;
+    /*the back and forth of the text alignment creates a sense of organization*/
     text-align: right;
     font-family: 'Courier New', Courier, monospace;
+    /*adds custom background image without repeat*/
     background-image: url("UATSpace-Program.png");
     background-repeat: no-repeat;
     background-color: gray;
+    /*manually sizes and positions the background image*/
     background-size: 180px 180px;
     background-position: 3% 50%;
+    /*adds a border and some padding to the login box*/
     border: 3px double rgba(80,80,80,0.95);
     padding: 3px;
+    /*manually defines the size of the login box to fit all elements*/
     width: 30em;
     height: 18em;
 }
@@ -169,11 +187,17 @@ label{
     color:rgba(255, 255, 255, 0.75)
 }
 input{
+    /*colors the background of the input boxes*/
     background:rgba(10,10,10,0.8);
-    color:white;
+    /*constrasting text*/
+    color:rgba(255, 255, 255, 1.0);
+    /*removes border*/
     border: 0px;
+    /*sets font family*/
     font-family: 'Courier New', Courier, monospace;
+    /*manually define width to match submit button*/
     width: 13em;
+    /*aligns input text to the right of the screen*/
     text-align: right;
 }
 #noteBlock{
@@ -189,11 +213,15 @@ input{
     text-align: center;
 }
 #timeBlock{
+    /*manually sets the font style, size, and weight*/
     font-family: 'Courier New', Courier, monospace;
     font-size: 120%;
     font-weight: bold;
+    /*contrasting color*/
     color: lightgreen;
+    /*differentiate from other elements*/
     text-align: right;
+    /*increased readability*/
     padding: 1em;
 }
 .statBlock{

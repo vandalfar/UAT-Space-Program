@@ -61,79 +61,91 @@
     </p>
     <hr>
     <div class="launchAndLogin">
-        <div class="launchTable">
-                <table id="launchTable" border = "3" width = 100%>
-                    <!--defines the table head information the same way as the website header-->
-                    <thhead>
-                        <thhead>
-                            <!--title outside of the table-->
-                            <h3 id="missionDates">MISSION LAUNCH DATES:</h3>
-                            <col style = "width : 20%">
-                            <col style = "width : 20%">
-                            <col style = "width : 20%">
-                            <col style = "width : 20%">
-                            <tr>
-                                <th>Date:</th>
-                                <th>Time:</th>
-                                <th>Weather:</th>
-                                <th>Launch Result:</th><!--Boolean-->
-                            </tr>
-                        </thhead>
-                        <tbody>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-11-21">Nov. 21<span class="superScript">st</span> 2022</time></td>
-                                <td><time datetime="11:59">11:59 AM</time></td>
-                                <td>67° F Mostly Sunny </td>
-                                <td id="launchResult1">Success</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-11-28">Nov. 28<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="11:59">11:59 AM</time></td>
-                                <td>71° F Cloudy </td>
-                                <td id="launchResult2">Success</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="11:59">11:59 AM</time></td>
-                                <td>69° F Sunny </td>
-                                <td id="launchResult3">TBD</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="23:59">11:59 PM</time></td>
-                                <td>47° F Clear </td>
-                                <td id="launchResult3">TBD</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="11:59">11:59 AM</time></td>
-                                <td>64° F Partly Cloudy </td>
-                                <td id="launchResult4">TBD</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="23:59">11:59 PM</time></td>
-                                <td>42° F Partly Cloudy </td>
-                                <td id="launchResult5">TBD</td>      
-                            </tr>
-                            <tr id = "tbody">
-                                <td><time datetime="2022-12-19">Dec. 19<span class="superScript">th</span> 2022</time></td>
-                                <td><time datetime="11:59">11:59 AM</time></td>
-                                <td>~ 68° F Unknown </td>
-                                <td id="launchResult6">TBD</td>      
-                            </tr>
-                    </tbody>
-                </table>
+        <div>
+             <table id="launchTable" border = "3" width = 100%>
+                <!--defines the launch table head information the same way as the website header-->
+                <thhead>
+                    <!--title outside of the table-->
+                    <h3 id="missionDates">MISSION LAUNCH DATES:</h3>
+                    <!--four columns that take up a quarter of the element-->
+                    <col style = "width : 25%">
+                    <col style = "width : 25%">
+                    <col style = "width : 25%">
+                    <col style = "width : 25%">
+                    <tr>
+                        <!--table row headings-->
+                        <th>Date:</th>
+                        <th>Time:</th>
+                        <th>Weather:</th>
+                        <th>Launch Result:</th><!--Boolean-->
+                    </tr>
+                </thhead>
+                <!--launch table body-->
+                <tbody>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-11-21">Nov. 21<span class="superScript">st</span> 2022</time></td>
+                        <td><time datetime="11:59">11:59 AM</time></td>
+                        <td>67° F Mostly Sunny </td>
+                        <td id="launchResult1">Success</td>      
+                    </tr>
+                    <tr >
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-11-28">Nov. 28<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="11:59">11:59 AM</time></td>
+                        <td>71° F Cloudy </td>
+                        <td id="launchResult2">Success</td>      
+                    </tr>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="11:59">11:59 AM</time></td>
+                        <td>69° F Sunny </td>
+                        <td id="launchResult3">TBD</td>      
+                    </tr>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="23:59">11:59 PM</time></td>
+                        <td>47° F Clear </td>
+                        <td id="launchResult3">TBD</td>      
+                    </tr>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="11:59">11:59 AM</time></td>
+                        <td>64° F Partly Cloudy </td>
+                        <td id="launchResult4">TBD</td>      
+                    </tr>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="23:59">11:59 PM</time></td>
+                        <td>42° F Partly Cloudy </td>
+                        <td id="launchResult5">TBD</td>      
+                    </tr>
+                    <tr>
+                        <!--each td element displays in a separate cell-->
+                        <td><time datetime="2022-12-19">Dec. 19<span class="superScript">th</span> 2022</time></td>
+                        <td><time datetime="11:59">11:59 AM</time></td>
+                        <td>~ 68° F Unknown </td>
+                        <td id="launchResult6">TBD</td>      
+                    </tr>
+                </tbody>
+            </table>
         </div> 
-        <!--logout button returns user to previous page by calling a function-->
+        <!--login box-->
         <div class = "loginID">
             <p>
-                <img class = "userImage" src="loggedIn.png"><h3 class="console">><span>:</span>/Session_Information:</h3>
+                <img class = "userImage" src="loggedIn.png">
+                <!--called this class console because the animation reminds me of a console interface-->
+                <h3 class="console">><span>:</span>/Session_Information:</h3>
             </p>
             <!--target of getInfo();-->
             <p id = "loginStatusTwo">
                 
             </p>
+             <!--logout button returns user to previous page by calling a function-->
             <button id = "logOutButton" onclick="logOut();" >Log Out</button>
         </div>
     </div>
