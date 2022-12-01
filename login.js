@@ -19,18 +19,16 @@ function logIn(){
     var badgeNo = document.getElementById("badgeNo").value;
     var comboN = firstName + lastName;
     //takes the combined first and last name and checks its length against the ruleset
-    if (comboN.length > 20 || comboN.length < 4){
+    if (comboN.length > 20){
         //updates loginStatus to the text below
-        document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Total length must be less than 20 characters.";
+        document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Total length must be \u0020</br>less than 20 characters.";
         //alert("Name Setting Invalid");
     } 
-    //assuming that the minimum total length of the combined names is four, half of that is two
-    else if (lastName.length < 2){
-        document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Please enter your last name.";
-    }
-    //assuming that the minimum total length of the combined names is four, half of that is two
-    else if (firstName.length < 2){
+    else if (firstName.length < 1){
         document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Please enter your first name.";
+    }
+    else if (lastName.length < 1){
+        document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Please enter your last name.";
     }
     //checks if the badge number is 3 digits
     else if (badgeNo.length > 3 || badgeNo.length < 2){

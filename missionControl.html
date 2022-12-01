@@ -47,7 +47,7 @@
         </p>
     </p>   
     <!--the buttons won't center the way I want without the HTML tag. Putting them in a div for floating control could help, but is really finicky-->
-    <p id="buttons">
+    <p class="launchButtons">
         <center>
             <!--start button calls countDown(); function-->
             <button id = "startButton" onclick = "countDown();" >
@@ -62,16 +62,16 @@
     <hr>
     <div class="launchAndLogin">
         <div>
-             <table id="launchTable" border = "3" width = 100%>
+             <table border = "3" width = 100%>
                 <!--defines the launch table head information the same way as the website header-->
                 <thhead>
                     <!--title outside of the table-->
                     <h3 id="missionDates">MISSION LAUNCH DATES:</h3>
                     <!--four columns that take up a quarter of the element-->
                     <col style = "width : 25%">
-                    <col style = "width : 25%">
-                    <col style = "width : 25%">
-                    <col style = "width : 25%">
+                    <col style = "width : 20%">
+                    <col style = "width : 35%">
+                    <col style = "width : 20%">
                     <tr>
                         <!--table row headings-->
                         <th>Date:</th>
@@ -83,49 +83,49 @@
                 <!--launch table body-->
                 <tbody>
                     <tr>
-                        <!--each td element displays in a separate cell-->
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
                         <td><time datetime="2022-11-21">Nov. 21<span class="superScript">st</span> 2022</time></td>
                         <td><time datetime="11:59">11:59 AM</time></td>
                         <td>67° F Mostly Sunny </td>
                         <td id="launchResult1">Success</td>      
                     </tr>
                     <tr >
-                        <!--each td element displays in a separate cell-->
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
                         <td><time datetime="2022-11-28">Nov. 28<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="11:59">11:59 AM</time></td>
                         <td>71° F Cloudy </td>
                         <td id="launchResult2">Success</td>      
                     </tr>
                     <tr>
-                        <!--each td element displays in a separate cell-->
-                        <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
+                        <td><time datetime="2022-12-05">Dec. 05<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="11:59">11:59 AM</time></td>
                         <td>69° F Sunny </td>
                         <td id="launchResult3">TBD</td>      
                     </tr>
                     <tr>
-                        <!--each td element displays in a separate cell-->
-                        <td><time datetime="2022-12-05">Dec. 5<span class="superScript">th</span> 2022</time></td>
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
+                        <td><time datetime="2022-12-05">Dec. 05<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="23:59">11:59 PM</time></td>
                         <td>47° F Clear </td>
                         <td id="launchResult3">TBD</td>      
                     </tr>
                     <tr>
-                        <!--each td element displays in a separate cell-->
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
                         <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="11:59">11:59 AM</time></td>
                         <td>64° F Partly Cloudy </td>
                         <td id="launchResult4">TBD</td>      
                     </tr>
                     <tr>
-                        <!--each td element displays in a separate cell-->
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
                         <td><time datetime="2022-12-12">Dec. 12<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="23:59">11:59 PM</time></td>
                         <td>42° F Partly Cloudy </td>
                         <td id="launchResult5">TBD</td>      
                     </tr>
                     <tr>
-                        <!--each td element displays in a separate cell-->
+                        <!--each td element displays in a separate cell, using datetime for accessibility-->
                         <td><time datetime="2022-12-19">Dec. 19<span class="superScript">th</span> 2022</time></td>
                         <td><time datetime="11:59">11:59 AM</time></td>
                         <td>~ 68° F Unknown </td>
@@ -146,21 +146,21 @@
                 
             </p>
              <!--logout button returns user to previous page by calling a function-->
-            <button id = "logOutButton" onclick="logOut();" >Log Out</button>
+            <button class="buttonStyle" id = "logOutButton" onclick="logOut();" >Log Out</button>
         </div>
     </div>
     <hr>
     <div id="noteBlock">
-        <div id="timeBlock">
-            <p class="statBlock"><span>></span> UAT_OS v1.0</p>
+        <div id="timeLine">
+            <p class="statBlock"><span>></span>UAT_OS v1.0<br>©2022 UASoft<br>All rights reserved.</p>
             <p>Time & Date: <span id="dateTime">Loading...</span></p>
         </div>
         <label for="noteText"><h3 id="userNotes">><span>:</span>/user/Notes/sessionNote.txt</h3></label>
         <br>
         <textarea rows="24" cols="100" type ="text" id = "noteText" name="note" placeholder="//Type your notes here."></textarea>
         <br>
-        <button id="saveNote" onclick="saveNote();">Save</button>
-        <button id="clearNote" onclick="clearNote();">Clear</button>
+        <button class="buttonStyle" id="saveNote" onclick="saveNote();">Save</button>
+        <button class="buttonStyle" id ="clearNote" onclick="clearNote();">Clear</button>
     </div>
 </body>
 <footer>
@@ -175,7 +175,7 @@
             Curator: M. Anderson<br>
             WebSite Design: Michael G. Anderson<br>
             <br>
-            Last update: November 30, 2022
+            Last update: December <span class="superScript">st</span>, 2022
         </p>
 </footer>
 </html>

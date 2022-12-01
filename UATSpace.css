@@ -68,19 +68,6 @@ h3{
     padding-right: 1em;
     padding-left: 1em;
 }
-#missionDates{
-    /*aligning the text to the center of the flexbox*/
-    text-align: center;
-    /*matches the color of other secondary elements*/
-    color: rgba(255,0,0,0.8);
-    /*visually closer to h2 size without matching it exactly*/
-    font-size: 140%;
-    font-family: 'Courier New', Courier, monospace;
-    /*bumps the label over by 12em to be more visually inline to the table*/
-    margin-left: 12em;
-    /*resets the background to clear*/
-    background-color:rgba(0, 0, 0, 0.0);
-}
 /*copies the stype of the UAT link for consistency*/
 .linkList span {
     /*forces the text to be blue*/
@@ -128,20 +115,29 @@ div{
 .launchAndLogin {
     display:flex;
 }
-#launchTable{
-    /*forces the width of the table flexbox element to be wider*/
-    width: 145%;
+#missionDates{
+    /*aligning the text to the center of the flexbox*/
+    text-align: center;
+    /*matches the color of other secondary elements*/
+    color: rgba(255,0,0,0.8);
+    /*visually closer to h2 size without matching it exactly*/
+    font-size: 130%;
+    font-family: 'Courier New', Courier, monospace;
+    /*adds a border*/
+    border: 3px double black;
+    /*hides the sides of the border*/
+    border-left: 0px;
+    border-right: 0px;
 }
 th{
-    /*manually set font and size*/
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 120%;
+    /*manually set font*/
+    font-family:Courier, monospace;
 }
 td{
     /*align the text to the center of the cell*/
     text-align: center;
     /*manually set font and color*/
-    font-family:'Courier New', Courier, monospace;
+    font-family:monospace;
     background-color: rgba(100, 100, 100, 0.10);
 }
 td:nth-child(4){
@@ -155,8 +151,6 @@ td:nth-child(4){
     color:green;
     font-weight: bold;
     text-align: center;
-    /*changing font to draw attention*/
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /*removes 1em right padding from success statements*/
     padding-right: 0px;
 }
@@ -184,6 +178,7 @@ td:nth-child(4){
     height: 18em;
 }
 label{
+    /*increases visibility of the label*/
     color:rgba(255, 255, 255, 0.75)
 }
 input{
@@ -202,19 +197,19 @@ input{
 }
 #noteBlock{
     /*aligns the block to the right side of the screen*/
-    margin-left: 30.5%;
+    margin-left: 47.25%;
     /*immitates a computer terminal with this background*/
     background-color: rgba( 0, 0, 0, 1.0);
     /*converts display to inline-block to cut off background color at area size*/
     display:inline-block;
-    /*border helps visual interest*/
-    border: 5px double rgba(255, 255, 255, 0.9);
+    /*border helps visual interest and obscures rounded textarea corner slightly*/
+    border: 5px double rgba(252, 255, 254, 0.9);
     /*aligns the buttons to the center*/
     text-align: center;
 }
-#timeBlock{
+#timeLine{
     /*manually sets the font style, size, and weight*/
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     font-size: 120%;
     font-weight: bold;
     /*contrasting color*/
@@ -225,17 +220,12 @@ input{
     padding: 1em;
 }
 .statBlock{
+    font-family:monospace;
     text-align: left;
     color: red;
 }
 .statBlock span{
-      /*initial opacity in the animation is set to 100%*/
-      opacity: 100%;
-      /*calls the animation with shorthand and keyframes with the name "initA" and runs it infinitely,
-        using the timing function step-end (the same as steps(1, jump-end) to create the blink,
-        and stretching the animation over one and a half seconds to create the desired effect*/
-      animation: 1.5s initA step-end infinite;
-      animation-delay: 0.5s;
+    text-decoration: underline;
 }
 #dateTime{
     color:lightyellow;
@@ -243,7 +233,7 @@ input{
 #userNotes{
     /*coloring and stylizing the text*/
     color:rgba(128, 128, 128, 0.925);
-    font-family: 'Courier New', Courier, monospace;
+    font-family:monospace;
     /*align headertext left*/
     text-align: left;
 }
@@ -259,21 +249,17 @@ textarea{
     /*colors the background of the text area*/
     background:rgba(0,0,0,0.8);
     /*sets the text color*/
-    color:rgba(255, 255, 255, 1.0);
+    color:rgba(30, 255, 0, 0.932);
     /*increased font size for consistency*/
     font-size: 120%;
-    /*removed visible border*/
+    /*remove visible border*/
     border: 0px;
-    /*font settings*/
-    font-family: 'Courier New', Courier, monospace;
     /*align text left*/
     text-align: left;
+    /*adding padding to bring textarea in alignment with #userNotes*/
+    padding: 1em;
 }
-#noteText{
-    /*color user-input text differently*/
-    color:rgba(211, 211, 211, 1.0);
-}
-#loginButton, #logOutButton, #saveNote, #clearNote{
+.buttonStyle{
     /*aligns button text to center*/
     text-align: center;
     /*creates semitransparent background*/
@@ -430,7 +416,7 @@ textarea{
     50%{opacity: 100;}
 }
 /*----------------------------------------------------------------------      End of Animation          ----------------------------------------------------------------------------*/
-#buttons{
+.launchButtons{
     /*moves the buttons over right to be in alignment with A of UAT Space logo*/
     margin-left: -1%;
 }
