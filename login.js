@@ -31,7 +31,7 @@ function logIn(){
         document.getElementById("loginStatus").innerHTML = "Invalid input for name. </br> Please enter your last name.";
     }
     //checks if the badge number is 3 digits
-    else if (badgeNo.length > 3 || badgeNo.length < 2){
+    else if (badgeNo.length > 3 || badgeNo.length < 3){
         //updates loginStatus to the text below
         document.getElementById("loginStatus").innerHTML = "Invalid Badge No. </br>Please try again.";
         //alert("Invalid Badge Number");
